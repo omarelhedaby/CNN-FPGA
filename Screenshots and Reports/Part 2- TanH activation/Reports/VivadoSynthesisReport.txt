@@ -1,0 +1,810 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed Jun 03 20:21:38 2020
+# Process ID: 9792
+# Log file: C:/Users/MY PC/Desktop/Logic2/Fresh_Project_Vivado/Fresh_Project_Vivado.runs/synth_1/UsingTheTanh.vds
+# Journal file: C:/Users/MY PC/Desktop/Logic2/Fresh_Project_Vivado/Fresh_Project_Vivado.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source UsingTheTanh.tcl -notrace
+Command: synth_design -top UsingTheTanh -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 266.836 ; gain = 53.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'UsingTheTanh' [C:/Users/MY PC/Desktop/Logic2/FreshProjectModelSim/UsingTheTanh.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter nofinputs bound to: 784 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'HyperBolicTangent' [C:/Users/MY PC/Desktop/Logic2/FreshProjectModelSim/HyperBolicTangent.v:2]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter taylor_iter bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'floatMult' [C:/Users/MY PC/Desktop/Logic2/ANN/ANN/ANN Code/floatMult.v:1]
+INFO: [Synth 8-256] done synthesizing module 'floatMult' (1#1) [C:/Users/MY PC/Desktop/Logic2/ANN/ANN/ANN Code/floatMult.v:1]
+INFO: [Synth 8-638] synthesizing module 'floatAdd' [C:/Users/MY PC/Desktop/Logic2/ANN/ANN/ANN Code/floatAdd.v:1]
+INFO: [Synth 8-256] done synthesizing module 'floatAdd' (2#1) [C:/Users/MY PC/Desktop/Logic2/ANN/ANN/ANN Code/floatAdd.v:1]
+INFO: [Synth 8-256] done synthesizing module 'HyperBolicTangent' (3#1) [C:/Users/MY PC/Desktop/Logic2/FreshProjectModelSim/HyperBolicTangent.v:2]
+INFO: [Synth 8-256] done synthesizing module 'UsingTheTanh' (4#1) [C:/Users/MY PC/Desktop/Logic2/FreshProjectModelSim/UsingTheTanh.v:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 377.359 ; gain = 164.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 377.359 ; gain = 164.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 377.359 ; gain = 164.270
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-5545] ROM "OutputFinal" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "OutputFinal" won't be mapped to RAM because address size (128) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Finished" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Coefficients" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "ForXSqOrOne" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 802.117 ; gain = 589.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |case__16__GD      |           1|     65660|
+|2     |reg__9            |           1|     25088|
+|3     |datapath__15__GD  |           1|     49494|
+|4     |UsingTheTanh__GB4 |           1|     49628|
+|5     |HyperBolicTangent |           1|     18316|
+|6     |muxpart__10       |           1|      8160|
++------+------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register Output_reg [C:/Users/MY PC/Desktop/Logic2/FreshProjectModelSim/UsingTheTanh.v:27]
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   4 Input      8 Bit       Adders := 3     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	            25088 Bit    Registers := 1     
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input  25088 Bit        Muxes := 4     
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 66    
+	   2 Input     32 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 26    
+	   2 Input      8 Bit        Muxes := 1     
+	  23 Input      6 Bit        Muxes := 3     
+	  26 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register Output_reg [C:/Users/MY PC/Desktop/Logic2/FreshProjectModelSim/UsingTheTanh.v:27]
+Hierarchical RTL Component report 
+Module UsingTheTanh 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	            25088 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input  25088 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+Module floatMult__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 22    
+	   2 Input     32 Bit        Muxes := 1     
+	  23 Input      6 Bit        Muxes := 1     
+Module floatMult__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 22    
+	   2 Input     32 Bit        Muxes := 1     
+	  23 Input      6 Bit        Muxes := 1     
+Module floatMult 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 22    
+	   2 Input     32 Bit        Muxes := 1     
+	  23 Input      6 Bit        Muxes := 1     
+Module floatAdd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 26    
+	   2 Input      8 Bit        Muxes := 1     
+	  26 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module HyperBolicTangent 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25087]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25086]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25085]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25084]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25083]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25082]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25081]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25080]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25079]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25078]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25077]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25076]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25075]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25074]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25073]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25072]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25071]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25070]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25069]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25068]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25067]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25066]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25065]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25064]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25063]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25062]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25061]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25060]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25059]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25058]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25057]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25056]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25055]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25054]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25053]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25052]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25051]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25050]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25049]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25048]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25047]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25046]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25045]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25044]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25043]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25042]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25041]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25040]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25039]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25038]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25037]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25036]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25035]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25034]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25033]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25032]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25031]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25030]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25029]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25028]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25027]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25026]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25025]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25024]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25023]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25022]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25021]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25020]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25019]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25018]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25017]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25016]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25015]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25014]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25013]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25012]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25011]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25010]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25009]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25008]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25007]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25006]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25005]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25004]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25003]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25002]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25001]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[25000]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24999]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24998]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24997]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24996]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24995]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24994]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24993]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24992]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24991]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24990]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24989]
+WARNING: [Synth 8-3331] design UsingTheTanh has unconnected port x[24988]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'i_reg[7:0]' into 'i_reg[7:0]' [C:/Users/MY PC/Desktop/Logic2/FreshProjectModelSim/UsingTheTanh.v:15]
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port P[13] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port P[4] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port P[0] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16414] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16413] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16412] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16411] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16410] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16409] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16408] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16407] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16406] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16405] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16404] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16403] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16402] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16401] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16400] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16399] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16398] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16397] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16396] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16395] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16394] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16393] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16392] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16391] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16390] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16389] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16388] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16387] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16386] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16385] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16384] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16383] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16382] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16381] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16380] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16379] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16378] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16377] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16376] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16375] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16374] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16373] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16372] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16371] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16370] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16369] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16368] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16367] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16366] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16365] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16364] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16363] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16362] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16361] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16360] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16359] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16358] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16357] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16356] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16355] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16354] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16353] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16352] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16351] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16350] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16349] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16348] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16347] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16346] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16345] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16344] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16343] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16342] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16341] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16340] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16339] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16338] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16337] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16336] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16335] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16334] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16333] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16332] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16331] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16330] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16329] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16328] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16327] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16326] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16325] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16324] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16323] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16322] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB4 has port O3[16321] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+INFO: [Synth 8-5545] ROM "Coefficients" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "OutputFinal" won't be mapped to RAM because address size (128) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "OutputFinal" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Finished" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "ForXSqOrOne" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:44 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:44 . Memory (MB): peak = 1078.098 ; gain = 865.008
+
+Report RTL Partitions: 
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |case__16__GD      |           1|     65660|
+|2     |reg__9            |           1|     25088|
+|3     |datapath__15__GD  |           1|     49494|
+|4     |UsingTheTanh__GB4 |           1|     24510|
+|5     |HyperBolicTangent |           1|     18755|
+|6     |muxpart__10       |           1|      8160|
++------+------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|floatMult   | A*B            | No           | 25     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | No           | 25     | 8      | 31     | 25     | 31     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|floatMult   | A*B            | No           | 25     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | No           | 25     | 8      | 31     | 25     | 31     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|floatMult   | A*B            | No           | 25     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | No           | 25     | 8      | 31     | 25     | 31     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FinishedTanh_reg)
+WARNING: [Synth 8-3332] Sequential element (FinishedTanh_reg) is unused and will be removed from module UsingTheTanh.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16415] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16416] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16417] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16418] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16419] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16420] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16421] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16422] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16423] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16424] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16425] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16426] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16427] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16428] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16429] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16430] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16431] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16432] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16433] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16434] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16435] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16436] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16437] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16438] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16439] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16440] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16441] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16442] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16443] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16444] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16445] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16446] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16447] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16448] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16449] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16450] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16451] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16452] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16453] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16454] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16455] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16456] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16457] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16458] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16459] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16460] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16461] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16462] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16463] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16464] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16465] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16466] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16467] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16468] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16469] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16470] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16471] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16472] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16473] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16474] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16475] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16476] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16477] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16478] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16479] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16480] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16481] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16482] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16483] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16484] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16485] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16486] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16487] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16488] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16489] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16490] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16491] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16492] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16493] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16494] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16495] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16496] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16497] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16498] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16499] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16500] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16501] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16502] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16503] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16504] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16505] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16506] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16507] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16508] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16509] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16510] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16511] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16512] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Output_reg[16513] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[127] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[126] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[125] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[124] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[123] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[122] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[121] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[120] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[119] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[118] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[117] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[116] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[115] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[114] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[113] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[112] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[111] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[110] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[109] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[108] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[107] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[106] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[105] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[104] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[103] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[102] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[101] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[100] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[99] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[98] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[97] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[96] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[95] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[94] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[93] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[92] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[91] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[90] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[89] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[88] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[87] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[86] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[85] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[84] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[83] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[82] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[81] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[80] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[79] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[78] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[77] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[76] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[75] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[74] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[73] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[72] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[71] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[70] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[69] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[67] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[66] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[65] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[64] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[62] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[61] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[60] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[59] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[58] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[57] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[56] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[55] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[54] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[53] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[52] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[51] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[50] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[49] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[48] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[47] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[46] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[45] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[44] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[43] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[42] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[41] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[40] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[39] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[38] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[37] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[34] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[30] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[29] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[28] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[27] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[25] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[23] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[22] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[21] ) is unused and will be removed from module HyperBolicTangent.
+WARNING: [Synth 8-3332] Sequential element (\Coefficients_reg[20] ) is unused and will be removed from module HyperBolicTangent.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:01:13 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:26 ; elapsed = 00:01:13 . Memory (MB): peak = 1078.098 ; gain = 865.008
+
+Report RTL Partitions: 
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |case__16__GD      |           1|     65660|
+|2     |reg__9            |           1|     32830|
+|3     |datapath__15__GD  |           1|     32850|
+|4     |UsingTheTanh__GB4 |           1|     24510|
+|5     |HyperBolicTangent |           1|      6818|
+|6     |muxpart__10       |           1|      8160|
++------+------------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:26 ; elapsed = 00:01:13 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:01:13 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |case__16__GD      |           1|     65660|
+|2     |reg__9            |           1|     32830|
+|3     |datapath__15__GD  |           1|     32850|
+|4     |UsingTheTanh__GB4 |           1|     24510|
+|5     |HyperBolicTangent |           1|      6818|
+|6     |muxpart__10       |           1|      8160|
++------+------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:28 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:01:33 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:01:33 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:01:38 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:01:38 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:38 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    40|
+|3     |DSP48E1 |     6|
+|4     |LUT1    |    42|
+|5     |LUT2    |   483|
+|6     |LUT3    |   958|
+|7     |LUT4    | 13273|
+|8     |LUT5    |  3163|
+|9     |LUT6    | 12928|
+|10    |MUXF7   |  1088|
+|11    |MUXF8   |   544|
+|12    |FDRE    | 16694|
+|13    |FDSE    |    18|
+|14    |IBUF    |  8194|
+|15    |OBUF    | 25089|
++------+--------+------+
+
+Report Instance Areas: 
++------+------------------------+------------------+------+
+|      |Instance                |Module            |Cells |
++------+------------------------+------------------+------+
+|1     |top                     |                  | 82521|
+|2     |  TanhArray             |HyperBolicTangent | 23419|
+|3     |    MGeneratingXterm    |floatMult         |   767|
+|4     |    MSquaring           |floatMult_0       |  3115|
+|5     |    MTheCoefficientTerm |floatMult_1       |   776|
++------+------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:02:04 . Memory (MB): peak = 1078.098 ; gain = 865.008
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17197 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:14 ; elapsed = 00:01:58 . Memory (MB): peak = 1078.098 ; gain = 842.082
+Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:02:05 . Memory (MB): peak = 1078.098 ; gain = 865.008
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8240 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+138 Infos, 300 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:02:17 . Memory (MB): peak = 1078.098 ; gain = 855.648
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1078.098 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:01:31 ; elapsed = 00:01:33 . Memory (MB): peak = 1078.098 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:01:31 ; elapsed = 00:01:33 . Memory (MB): peak = 1078.098 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 03 20:25:46 2020...

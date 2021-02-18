@@ -1,0 +1,289 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Jun 08 12:57:52 2020
+# Process ID: 15440
+# Log file: C:/Users/Daniel/Desktop/AvgPool/AvgPool.runs/synth_1/AvgUnit.vds
+# Journal file: C:/Users/Daniel/Desktop/AvgPool/AvgPool.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source AvgUnit.tcl -notrace
+Command: synth_design -top AvgUnit -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 280.992 ; gain = 32.348
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'AvgUnit' [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/AvgUnit.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'floatAdd' [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatAdd.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatAdd' (1#1) [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatAdd.v:3]
+INFO: [Synth 8-638] synthesizing module 'floatMult' [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatMult.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatMult' (2#1) [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatMult.v:3]
+INFO: [Synth 8-256] done synthesizing module 'AvgUnit' (3#1) [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/AvgUnit.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 306.953 ; gain = 58.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 306.953 ; gain = 58.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 306.953 ; gain = 58.309
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatMult.v:19]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatMult.v:19]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 323.586 ; gain = 74.941
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 3     
+	   3 Input     12 Bit       Adders := 6     
+	   3 Input      8 Bit       Adders := 6     
+	   2 Input      5 Bit       Adders := 3     
+	   4 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 10    
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 15    
+	   2 Input     10 Bit        Muxes := 39    
+	  13 Input      5 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 9     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module floatAdd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 5     
+	   2 Input     10 Bit        Muxes := 13    
+	  13 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module floatMult 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 10    
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+	   5 Input      5 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 670.410 ; gain = 421.766
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 671.625 ; gain = 422.980
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 671.625 ; gain = 422.980
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|floatMult   | A*B         | No           | 11     | 11     | 48     | 25     | 22     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 833.398 ; gain = 584.754
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY8  |    18|
+|2     |DSP48E2 |     1|
+|3     |LUT1    |    24|
+|4     |LUT2    |   153|
+|5     |LUT3    |   103|
+|6     |LUT4    |    82|
+|7     |LUT5    |   114|
+|8     |LUT6    |   421|
+|9     |IBUF    |    64|
+|10    |OBUF    |    16|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-----------+------+
+|      |Instance |Module     |Cells |
++------+---------+-----------+------+
+|1     |top      |           |   996|
+|2     |  FADD1  |floatAdd   |   606|
+|3     |  FADD2  |floatAdd_0 |   126|
+|4     |  FADD3  |floatAdd_1 |   101|
+|5     |  FM     |floatMult  |    83|
++------+---------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 833.398 ; gain = 584.754
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 833.398 ; gain = 552.406
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 833.398 ; gain = 584.754
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 65 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 1 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 64 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 833.398 ; gain = 575.367
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.138 . Memory (MB): peak = 833.398 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 08 12:58:38 2020...

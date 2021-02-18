@@ -1,0 +1,586 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed May 27 11:15:24 2020
+# Process ID: 6120
+# Log file: C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.runs/synth_1/convLayerSingle.vds
+# Journal file: C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source convLayerSingle.tcl -notrace
+Command: synth_design -top convLayerSingle -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 281.984 ; gain = 34.266
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'convLayerSingle' [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/convLayerSingle.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter H bound to: 32 - type: integer 
+	Parameter W bound to: 32 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'convUnit' [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/convUnit.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'processingElement' [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/processingElement.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'floatMult' [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/floatMult.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatMult' (1#1) [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/floatMult.v:3]
+INFO: [Synth 8-638] synthesizing module 'floatAdd' [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/floatAdd.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatAdd' (2#1) [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/floatAdd.v:3]
+INFO: [Synth 8-256] done synthesizing module 'processingElement' (3#1) [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/processingElement.v:3]
+INFO: [Synth 8-256] done synthesizing module 'convUnit' (4#1) [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/convUnit.v:3]
+INFO: [Synth 8-638] synthesizing module 'rowSelector' [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/rowSelector.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter H bound to: 32 - type: integer 
+	Parameter W bound to: 32 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rowSelector' (5#1) [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/rowSelector.v:3]
+INFO: [Synth 8-256] done synthesizing module 'convLayerSingle' (6#1) [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/convLayerSingle.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-5546] ROM "outputVector" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "finishVector" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "internalReset" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+WARNING: [Synth 8-327] inferring latch for variable 'outputVector_reg' [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/rowSelector.v:17]
+WARNING: [Synth 8-327] inferring latch for variable 'finishVector_reg' [C:/Users/Daniel/Desktop/CNN Sequential/CNN Sequential.srcs/sources_1/imports/Convolution Sequential/rowSelector.v:44]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:16 ; elapsed = 00:01:30 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------------+------------+----------+
+|      |RTL Partition                 |Replication |Instances |
++------+------------------------------+------------+----------+
+|1     |muxpart                       |           1|    702464|
+|2     |case__1__GD                   |           1|    127238|
+|3     |rowSelector__outputVector_reg |           1|     25088|
+|4     |rowSelector__GB3              |           1|     25992|
+|5     |convUnit__GBM0                |           1|     32736|
+|6     |convUnit__GBM1                |           1|     24576|
+|7     |convUnit__GBM2                |           1|     17332|
+|8     |convLayerSingle__GCB0         |           1|   1412484|
++------+------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     25 Bit       Adders := 28    
+	   3 Input     25 Bit       Adders := 56    
+	   2 Input     10 Bit       Adders := 28    
+	   4 Input      8 Bit       Adders := 28    
+	   3 Input      8 Bit       Adders := 56    
+	   2 Input      8 Bit       Adders := 28    
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 28    
++---Registers : 
+	               32 Bit    Registers := 85    
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input  25088 Bit        Muxes := 2     
+	  29 Input  25088 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 644   
+	   4 Input     32 Bit        Muxes := 56    
+	   2 Input     32 Bit        Muxes := 84    
+	   2 Input     24 Bit        Muxes := 140   
+	   2 Input     23 Bit        Muxes := 728   
+	   2 Input      8 Bit        Muxes := 28    
+	   2 Input      6 Bit        Muxes := 532   
+	   5 Input      6 Bit        Muxes := 28    
+	  26 Input      6 Bit        Muxes := 28    
+	   2 Input      1 Bit        Muxes := 57    
+	  29 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module convLayerSingle 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module rowSelector 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input  25088 Bit        Muxes := 2     
+	  29 Input  25088 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  29 Input      1 Bit        Muxes := 1     
+Module floatMult 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 23    
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 19    
+	   5 Input      6 Bit        Muxes := 1     
+Module floatAdd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 26    
+	   2 Input      8 Bit        Muxes := 1     
+	  26 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module processingElement 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module convUnit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:36 ; elapsed = 00:01:51 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23295]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23294]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23293]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23292]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23291]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23290]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23289]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23288]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23287]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23286]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23285]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23284]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23283]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23282]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23281]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23280]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23279]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23278]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23277]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23276]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23275]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23274]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23273]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23272]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23271]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23270]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23269]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23268]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23267]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23266]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23265]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23264]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23263]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23262]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23261]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23260]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23259]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23258]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23257]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23256]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23255]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23254]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23253]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23252]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23251]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23250]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23249]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23248]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23247]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23246]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23245]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23244]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23243]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23242]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23241]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23240]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23239]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23238]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23237]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23236]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23235]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23234]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23233]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23232]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23231]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23230]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23229]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23228]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23227]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23226]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23225]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23224]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23223]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23222]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23221]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23220]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23219]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23218]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23217]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23216]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23215]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23214]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23213]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23212]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23211]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23210]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23209]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23208]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23207]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23206]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23205]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23204]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23203]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23202]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23201]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23200]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23199]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23198]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23197]
+WARNING: [Synth 8-3331] design muxpart has unconnected port data1[23196]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[4] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[3] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[2] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[1] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[0] driven by constant 0
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "internalReset" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:59 ; elapsed = 00:05:35 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:01:59 ; elapsed = 00:05:35 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+
+Report RTL Partitions: 
++------+------------------------------+------------+----------+
+|      |RTL Partition                 |Replication |Instances |
++------+------------------------------+------------+----------+
+|1     |muxpart                       |           1|    702464|
+|2     |case__1__GD                   |           1|    127232|
+|3     |rowSelector__outputVector_reg |           1|     25088|
+|4     |rowSelector__GB3              |           1|     76168|
+|5     |convUnit__GBM0                |          28|     33056|
+|6     |convUnit__GBM1                |          28|     24832|
+|7     |convUnit__GBM2                |          28|      9750|
+|8     |convLayerSingle__GCB0         |           1|   1412484|
++------+------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|floatMult   | A*B            | No           | 25     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | No           | 25     | 8      | 31     | 25     | 31     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:04:46 ; elapsed = 00:15:09 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:04:46 ; elapsed = 00:15:09 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+
+Report RTL Partitions: 
++------+------------------------------+------------+----------+
+|      |RTL Partition                 |Replication |Instances |
++------+------------------------------+------------+----------+
+|1     |muxpart                       |           1|    702464|
+|2     |case__1__GD                   |           1|    127232|
+|3     |rowSelector__outputVector_reg |           1|     25088|
+|4     |rowSelector__GB3              |           1|     76168|
+|5     |convUnit__GBM0                |          28|      2428|
+|6     |convUnit__GBM1                |          28|      1861|
+|7     |convUnit__GBM2                |          28|      4132|
+|8     |convLayerSingle__GCB0         |           1|    597680|
++------+------------------------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:46 ; elapsed = 00:15:09 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:46 ; elapsed = 00:15:09 . Memory (MB): peak = 2922.043 ; gain = 2674.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------------+------------+----------+
+|      |RTL Partition                 |Replication |Instances |
++------+------------------------------+------------+----------+
+|1     |muxpart                       |           1|    702464|
+|2     |case__1__GD                   |           1|    127232|
+|3     |rowSelector__outputVector_reg |           1|     25088|
+|4     |rowSelector__GB3              |           1|     76168|
+|5     |convUnit__GBM0                |          28|      2428|
+|6     |convUnit__GBM1                |          28|      1861|
+|7     |convUnit__GBM2                |          28|      4132|
+|8     |convLayerSingle__GCB0         |           1|    597680|
++------+------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:06:41 ; elapsed = 00:17:07 . Memory (MB): peak = 3817.227 ; gain = 3569.508
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:07:02 ; elapsed = 00:17:28 . Memory (MB): peak = 3817.227 ; gain = 3569.508
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:04 ; elapsed = 00:17:31 . Memory (MB): peak = 3817.227 ; gain = 3569.508
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:23 ; elapsed = 00:17:50 . Memory (MB): peak = 3817.227 ; gain = 3569.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:07:23 ; elapsed = 00:17:50 . Memory (MB): peak = 3817.227 ; gain = 3569.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:37 ; elapsed = 00:18:03 . Memory (MB): peak = 3817.227 ; gain = 3569.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+-------+
+|      |Cell    |Count  |
++------+--------+-------+
+|1     |BUFG    |      1|
+|2     |CARRY4  |   1128|
+|3     |DSP48E1 |     56|
+|4     |LUT1    |    475|
+|5     |LUT2    |   6611|
+|6     |LUT3    |  27543|
+|7     |LUT4    |  26636|
+|8     |LUT5    |  39268|
+|9     |LUT6    | 111752|
+|10    |MUXCY_L |    868|
+|11    |MUXF7   |  27456|
+|12    |MUXF8   |   1760|
+|13    |XORCY   |    896|
+|14    |FDCE    |   4195|
+|15    |FDPE    |     28|
+|16    |LD      |  25088|
+|17    |IBUF    |  33570|
+|18    |OBUF    |  25088|
++------+--------+-------+
+
+Report Instance Areas: 
++------+-------------------+---------------------+-------+
+|      |Instance           |Module               |Cells  |
++------+-------------------+---------------------+-------+
+|1     |top                |                     | 332419|
+|2     |  RS               |rowSelector          |  50176|
+|3     |  \genblk1[0].CU   |convUnit             |  13439|
+|4     |    PE             |processingElement_79 |   2766|
+|5     |      FM           |floatMult_80         |    717|
+|6     |  \genblk1[10].CU  |convUnit_0           |   7711|
+|7     |    PE             |processingElement_77 |   2766|
+|8     |      FM           |floatMult_78         |    717|
+|9     |  \genblk1[11].CU  |convUnit_1           |   7711|
+|10    |    PE             |processingElement_75 |   2766|
+|11    |      FM           |floatMult_76         |    717|
+|12    |  \genblk1[12].CU  |convUnit_2           |   7711|
+|13    |    PE             |processingElement_73 |   2766|
+|14    |      FM           |floatMult_74         |    717|
+|15    |  \genblk1[13].CU  |convUnit_3           |   7711|
+|16    |    PE             |processingElement_71 |   2766|
+|17    |      FM           |floatMult_72         |    717|
+|18    |  \genblk1[14].CU  |convUnit_4           |   7711|
+|19    |    PE             |processingElement_69 |   2766|
+|20    |      FM           |floatMult_70         |    717|
+|21    |  \genblk1[15].CU  |convUnit_5           |   7711|
+|22    |    PE             |processingElement_67 |   2766|
+|23    |      FM           |floatMult_68         |    717|
+|24    |  \genblk1[16].CU  |convUnit_6           |   7711|
+|25    |    PE             |processingElement_65 |   2766|
+|26    |      FM           |floatMult_66         |    717|
+|27    |  \genblk1[17].CU  |convUnit_7           |   7711|
+|28    |    PE             |processingElement_63 |   2766|
+|29    |      FM           |floatMult_64         |    717|
+|30    |  \genblk1[18].CU  |convUnit_8           |   7711|
+|31    |    PE             |processingElement_61 |   2766|
+|32    |      FM           |floatMult_62         |    717|
+|33    |  \genblk1[19].CU  |convUnit_9           |   7711|
+|34    |    PE             |processingElement_59 |   2766|
+|35    |      FM           |floatMult_60         |    717|
+|36    |  \genblk1[1].CU   |convUnit_10          |   8287|
+|37    |    PE             |processingElement_57 |   2766|
+|38    |      FM           |floatMult_58         |    717|
+|39    |  \genblk1[20].CU  |convUnit_11          |   7967|
+|40    |    PE             |processingElement_55 |   2766|
+|41    |      FM           |floatMult_56         |    717|
+|42    |  \genblk1[21].CU  |convUnit_12          |   8063|
+|43    |    PE             |processingElement_53 |   2766|
+|44    |      FM           |floatMult_54         |    717|
+|45    |  \genblk1[22].CU  |convUnit_13          |   7903|
+|46    |    PE             |processingElement_51 |   2766|
+|47    |      FM           |floatMult_52         |    717|
+|48    |  \genblk1[23].CU  |convUnit_14          |   8767|
+|49    |    PE             |processingElement_49 |   2766|
+|50    |      FM           |floatMult_50         |    717|
+|51    |  \genblk1[24].CU  |convUnit_15          |   7295|
+|52    |    PE             |processingElement_47 |   2766|
+|53    |      FM           |floatMult_48         |    717|
+|54    |  \genblk1[25].CU  |convUnit_16          |   7295|
+|55    |    PE             |processingElement_45 |   2766|
+|56    |      FM           |floatMult_46         |    717|
+|57    |  \genblk1[26].CU  |convUnit_17          |   7327|
+|58    |    PE             |processingElement_43 |   2766|
+|59    |      FM           |floatMult_44         |    717|
+|60    |  \genblk1[27].CU  |convUnit_18          |   7135|
+|61    |    PE             |processingElement_41 |   2766|
+|62    |      FM           |floatMult_42         |    717|
+|63    |  \genblk1[2].CU   |convUnit_19          |   7711|
+|64    |    PE             |processingElement_39 |   2766|
+|65    |      FM           |floatMult_40         |    717|
+|66    |  \genblk1[3].CU   |convUnit_20          |   7711|
+|67    |    PE             |processingElement_37 |   2766|
+|68    |      FM           |floatMult_38         |    717|
+|69    |  \genblk1[4].CU   |convUnit_21          |   7711|
+|70    |    PE             |processingElement_35 |   2766|
+|71    |      FM           |floatMult_36         |    717|
+|72    |  \genblk1[5].CU   |convUnit_22          |   7711|
+|73    |    PE             |processingElement_33 |   2766|
+|74    |      FM           |floatMult_34         |    717|
+|75    |  \genblk1[6].CU   |convUnit_23          |   7711|
+|76    |    PE             |processingElement_31 |   2766|
+|77    |      FM           |floatMult_32         |    717|
+|78    |  \genblk1[7].CU   |convUnit_24          |   7711|
+|79    |    PE             |processingElement_29 |   2766|
+|80    |      FM           |floatMult_30         |    717|
+|81    |  \genblk1[8].CU   |convUnit_25          |   7711|
+|82    |    PE             |processingElement_27 |   2766|
+|83    |      FM           |floatMult_28         |    717|
+|84    |  \genblk1[9].CU   |convUnit_26          |   7711|
+|85    |    PE             |processingElement    |   2766|
+|86    |      FM           |floatMult            |    717|
++------+-------------------+---------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:08:12 ; elapsed = 00:18:38 . Memory (MB): peak = 3817.227 ; gain = 3569.508
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 107 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:08:11 ; elapsed = 00:18:35 . Memory (MB): peak = 3817.227 ; gain = 3535.242
+Synthesis Optimization Complete : Time (s): cpu = 00:08:12 ; elapsed = 00:18:39 . Memory (MB): peak = 3817.227 ; gain = 3569.508
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 61606 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 5 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 25312 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 224 instances
+  LD => LDCE: 25088 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:09:34 ; elapsed = 00:19:57 . Memory (MB): peak = 3817.227 ; gain = 3560.121
+write_checkpoint: Time (s): cpu = 00:01:11 ; elapsed = 00:00:44 . Memory (MB): peak = 3817.227 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3817.227 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3817.227 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May 27 11:36:15 2020...

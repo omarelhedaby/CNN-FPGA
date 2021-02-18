@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/floatMult16.v"
+verilog xil_defaultlib  "../../../CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/floatAdd16.v"
+verilog xil_defaultlib  "../../../CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/processingElement16.v"
+verilog xil_defaultlib  "../../../CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/RFselector.v"
+verilog xil_defaultlib  "../../../CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/convUnit.v"
+verilog xil_defaultlib  "../../../CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/convLayerSingle.v"
+verilog xil_defaultlib  "../../../CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/convLayerMulti.v"
+verilog xil_defaultlib  "../../../CNN-FPGA-Vivado.srcs/sim_1/imports/Integration first part/convLayerMulti_TB.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

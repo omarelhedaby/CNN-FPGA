@@ -1,0 +1,589 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu May 28 15:01:51 2020
+# Process ID: 6268
+# Log file: C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.runs/synth_1/convLayerSingle.vds
+# Journal file: C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source convLayerSingle.tcl -notrace
+Command: synth_design -top convLayerSingle -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 281.711 ; gain = 33.305
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'convLayerSingle' [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/convLayerSingle.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter H bound to: 32 - type: integer 
+	Parameter W bound to: 32 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'RFselector' [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/RFselector.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter H bound to: 32 - type: integer 
+	Parameter W bound to: 32 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RFselector' (1#1) [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/RFselector.v:3]
+INFO: [Synth 8-638] synthesizing module 'convUnit' [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/convUnit.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'processingElement' [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/processingElement.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'floatMult' [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/floatMult.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatMult' (2#1) [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/floatMult.v:3]
+INFO: [Synth 8-638] synthesizing module 'floatAdd' [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/floatAdd.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatAdd' (3#1) [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/floatAdd.v:3]
+INFO: [Synth 8-256] done synthesizing module 'processingElement' (4#1) [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/processingElement.v:3]
+INFO: [Synth 8-256] done synthesizing module 'convUnit' (5#1) [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/convUnit.v:3]
+INFO: [Synth 8-256] done synthesizing module 'convLayerSingle' (6#1) [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/convLayerSingle.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 976.973 ; gain = 728.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 976.973 ; gain = 728.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 976.973 ; gain = 728.566
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-5545] ROM "internalReset" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+WARNING: [Synth 8-327] inferring latch for variable 'outputConv_reg' [C:/Users/Daniel/Desktop/CNN 28 optimized/CNN 28 optimized.srcs/sources_1/imports/Convolution Seq 28 Optimized/convLayerSingle.v:76]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 976.973 ; gain = 728.566
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |RFselector__GB0                 |           1|     24800|
+|2     |RFselector__GB1                 |           1|     24800|
+|3     |RFselector__GB2                 |           1|     24800|
+|4     |RFselector__GB3                 |           1|     19840|
+|5     |RFselector__GB4                 |           1|     24800|
+|6     |RFselector__GB5                 |           1|     24800|
+|7     |RFselector__GB6                 |           1|     24800|
+|8     |RFselector__GB7                 |           1|     19840|
+|9     |RFselector__GB8                 |           1|     34720|
+|10    |RFselector__GB9                 |           1|     19840|
+|11    |RFselector__GB10                |           1|     19840|
+|12    |RFselector__GB11                |           1|     19840|
+|13    |RFselector__GB12                |           1|     24800|
+|14    |RFselector__GB13                |           1|     19840|
+|15    |RFselector__GB14                |           1|     24800|
+|16    |RFselector__GB15                |           1|     34720|
+|17    |RFselector__GB16                |           1|     24800|
+|18    |RFselector__GB17                |           1|     19840|
+|19    |RFselector__GB18                |           1|     14880|
+|20    |RFselector__GB19                |           1|     19840|
+|21    |RFselector__GB20                |           1|     24800|
+|22    |RFselector__GB21                |           1|     29760|
+|23    |RFselector__GB22                |           1|     24800|
+|24    |RFselector__GB23                |           1|     24800|
+|25    |RFselector__GB24                |           1|     24800|
+|26    |RFselector__GB25                |           1|     24800|
+|27    |RFselector__GB26                |           1|     24800|
+|28    |RFselector__GB27                |           1|     24800|
+|29    |RFselector__GB28                |           1|     24800|
+|30    |convUnit__GBM0                  |           1|     32736|
+|31    |convUnit__GBM1                  |           1|     24576|
+|32    |convUnit__GBM2                  |           1|     17332|
+|33    |datapath__19__GD                |           1|    104048|
+|34    |convLayerSingle__outputConv_reg |           1|     25088|
+|35    |datapath__18__GD                |           1|    104048|
+|36    |convLayerSingle__GCB3           |           1|      1349|
++------+--------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     25 Bit       Adders := 28    
+	   3 Input     25 Bit       Adders := 56    
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 28    
+	   4 Input      8 Bit       Adders := 28    
+	   3 Input      8 Bit       Adders := 56    
+	   2 Input      8 Bit       Adders := 28    
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 28    
++---Registers : 
+	               32 Bit    Registers := 85    
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  64 Input    160 Bit        Muxes := 140   
+	   2 Input     48 Bit        Muxes := 644   
+	   4 Input     32 Bit        Muxes := 56    
+	   2 Input     32 Bit        Muxes := 84    
+	   2 Input     24 Bit        Muxes := 140   
+	   2 Input     23 Bit        Muxes := 728   
+	   2 Input      8 Bit        Muxes := 28    
+	   2 Input      6 Bit        Muxes := 532   
+	   5 Input      6 Bit        Muxes := 28    
+	  26 Input      6 Bit        Muxes := 28    
+	   2 Input      1 Bit        Muxes := 56    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module convLayerSingle 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module RFselector 
+Detailed RTL Component Info : 
++---Muxes : 
+	  64 Input    160 Bit        Muxes := 140   
+Module floatMult 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 23    
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 19    
+	   5 Input      6 Bit        Muxes := 1     
+Module floatAdd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 26    
+	   2 Input      8 Bit        Muxes := 1     
+	  26 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module processingElement 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module convUnit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 996.355 ; gain = 747.949
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "internalReset" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[4] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[3] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[2] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[1] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:04:36 . Memory (MB): peak = 996.355 ; gain = 747.949
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:01:42 ; elapsed = 00:04:36 . Memory (MB): peak = 996.355 ; gain = 747.949
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |RFselector__GB0                 |           1|     24800|
+|2     |RFselector__GB1                 |           1|     24800|
+|3     |RFselector__GB2                 |           1|     24800|
+|4     |RFselector__GB3                 |           1|     19840|
+|5     |RFselector__GB4                 |           1|     24800|
+|6     |RFselector__GB5                 |           1|     24800|
+|7     |RFselector__GB6                 |           1|     24800|
+|8     |RFselector__GB7                 |           1|     19840|
+|9     |RFselector__GB8                 |           1|     34720|
+|10    |RFselector__GB9                 |           1|     19840|
+|11    |RFselector__GB10                |           1|     19840|
+|12    |RFselector__GB11                |           1|     19840|
+|13    |RFselector__GB12                |           1|     24800|
+|14    |RFselector__GB13                |           1|     19840|
+|15    |RFselector__GB14                |           1|     24800|
+|16    |RFselector__GB15                |           1|     34720|
+|17    |RFselector__GB16                |           1|     24800|
+|18    |RFselector__GB17                |           1|     19840|
+|19    |RFselector__GB18                |           1|     14880|
+|20    |RFselector__GB19                |           1|     19840|
+|21    |RFselector__GB20                |           1|     24800|
+|22    |RFselector__GB21                |           1|     29760|
+|23    |RFselector__GB22                |           1|     24800|
+|24    |RFselector__GB23                |           1|     24800|
+|25    |RFselector__GB24                |           1|     24800|
+|26    |RFselector__GB25                |           1|     24800|
+|27    |RFselector__GB26                |           1|     24800|
+|28    |RFselector__GB27                |           1|     24800|
+|29    |RFselector__GB28                |           1|     24800|
+|30    |convUnit__GBM0                  |          28|     33056|
+|31    |convUnit__GBM1                  |          28|     24832|
+|32    |convUnit__GBM2                  |          28|      9750|
+|33    |datapath__19__GD                |           1|    104048|
+|34    |convLayerSingle__outputConv_reg |           1|     25088|
+|35    |datapath__18__GD                |           1|    104048|
+|36    |convLayerSingle__GCB3           |           1|      1359|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|floatMult   | A*B            | No           | 25     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | No           | 25     | 8      | 31     | 25     | 31     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:06:12 . Memory (MB): peak = 1332.273 ; gain = 1083.867
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:02:07 ; elapsed = 00:06:12 . Memory (MB): peak = 1332.273 ; gain = 1083.867
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |RFselector__GB0                 |           1|      8160|
+|2     |RFselector__GB1                 |           1|      8160|
+|3     |RFselector__GB2                 |           1|      8160|
+|4     |RFselector__GB3                 |           1|      7360|
+|5     |RFselector__GB4                 |           1|      8160|
+|6     |RFselector__GB5                 |           1|      8160|
+|7     |RFselector__GB6                 |           1|      8160|
+|8     |RFselector__GB7                 |           1|      7360|
+|9     |RFselector__GB8                 |           1|      8672|
+|10    |RFselector__GB9                 |           1|      8768|
+|11    |RFselector__GB10                |           1|      8192|
+|12    |RFselector__GB11                |           1|     11520|
+|13    |RFselector__GB12                |           1|      8160|
+|14    |RFselector__GB13                |           1|      7360|
+|15    |RFselector__GB14                |           1|      8160|
+|16    |RFselector__GB15                |           1|     11168|
+|17    |RFselector__GB16                |           1|      8160|
+|18    |RFselector__GB17                |           1|      8000|
+|19    |RFselector__GB18                |           1|      8288|
+|20    |RFselector__GB19                |           1|      8704|
+|21    |RFselector__GB20                |           1|     13504|
+|22    |RFselector__GB21                |           1|      8512|
+|23    |RFselector__GB22                |           1|      8992|
+|24    |RFselector__GB23                |           1|      8160|
+|25    |RFselector__GB24                |           1|      8160|
+|26    |RFselector__GB25                |           1|      8160|
+|27    |RFselector__GB26                |           1|      8160|
+|28    |RFselector__GB27                |           1|      8160|
+|29    |RFselector__GB28                |           1|      8160|
+|30    |convUnit__GBM0                  |          28|      2428|
+|31    |convUnit__GBM1                  |          28|      1861|
+|32    |convUnit__GBM2                  |          28|      4132|
+|33    |datapath__19__GD                |           1|     64777|
+|34    |convLayerSingle__outputConv_reg |           1|     25088|
+|35    |datapath__18__GD                |           1|     49466|
+|36    |convLayerSingle__GCB3           |           1|       156|
++------+--------------------------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:07 ; elapsed = 00:06:12 . Memory (MB): peak = 1332.273 ; gain = 1083.867
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:06:12 . Memory (MB): peak = 1332.273 ; gain = 1083.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |RFselector__GB0                 |           1|      8160|
+|2     |RFselector__GB1                 |           1|      8160|
+|3     |RFselector__GB2                 |           1|      8160|
+|4     |RFselector__GB3                 |           1|      7360|
+|5     |RFselector__GB4                 |           1|      8160|
+|6     |RFselector__GB5                 |           1|      8160|
+|7     |RFselector__GB6                 |           1|      8160|
+|8     |RFselector__GB7                 |           1|      7360|
+|9     |RFselector__GB8                 |           1|      8672|
+|10    |RFselector__GB9                 |           1|      8768|
+|11    |RFselector__GB10                |           1|      8192|
+|12    |RFselector__GB11                |           1|     11520|
+|13    |RFselector__GB12                |           1|      8160|
+|14    |RFselector__GB13                |           1|      7360|
+|15    |RFselector__GB14                |           1|      8160|
+|16    |RFselector__GB15                |           1|     11168|
+|17    |RFselector__GB16                |           1|      8160|
+|18    |RFselector__GB17                |           1|      8000|
+|19    |RFselector__GB18                |           1|      8288|
+|20    |RFselector__GB19                |           1|      8704|
+|21    |RFselector__GB20                |           1|     13504|
+|22    |RFselector__GB21                |           1|      8512|
+|23    |RFselector__GB22                |           1|      8992|
+|24    |RFselector__GB23                |           1|      8160|
+|25    |RFselector__GB24                |           1|      8160|
+|26    |RFselector__GB25                |           1|      8160|
+|27    |RFselector__GB26                |           1|      8160|
+|28    |RFselector__GB27                |           1|      8160|
+|29    |RFselector__GB28                |           1|      8160|
+|30    |convUnit__GBM0                  |          28|      2428|
+|31    |convUnit__GBM1                  |          28|      1861|
+|32    |convUnit__GBM2                  |          28|      4132|
+|33    |datapath__19__GD                |           1|     64777|
+|34    |convLayerSingle__outputConv_reg |           1|     25088|
+|35    |datapath__18__GD                |           1|     49466|
+|36    |convLayerSingle__GCB3           |           1|       156|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:52 ; elapsed = 00:06:57 . Memory (MB): peak = 1463.945 ; gain = 1215.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:10 ; elapsed = 00:07:16 . Memory (MB): peak = 1463.945 ; gain = 1215.539
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:12 ; elapsed = 00:07:18 . Memory (MB): peak = 1463.945 ; gain = 1215.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:25 ; elapsed = 00:07:31 . Memory (MB): peak = 1463.945 ; gain = 1215.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:03:25 ; elapsed = 00:07:31 . Memory (MB): peak = 1463.945 ; gain = 1215.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:33 ; elapsed = 00:07:39 . Memory (MB): peak = 1463.945 ; gain = 1215.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |  1131|
+|3     |DSP48E1 |    56|
+|4     |LUT1    |   424|
+|5     |LUT2    | 10745|
+|6     |LUT3    | 41828|
+|7     |LUT4    | 24113|
+|8     |LUT5    | 25777|
+|9     |LUT6    | 71717|
+|10    |MUXCY_L |   868|
+|11    |MUXF7   |  4000|
+|12    |MUXF8   |   160|
+|13    |XORCY   |   896|
+|14    |FDCE    |  3796|
+|15    |FDPE    |    33|
+|16    |LD      | 25088|
+|17    |IBUF    | 33570|
+|18    |OBUF    | 25088|
++------+--------+------+
+
+Report Instance Areas: 
++------+-------------------+---------------------+-------+
+|      |Instance           |Module               |Cells  |
++------+-------------------+---------------------+-------+
+|1     |top                |                     | 269291|
+|2     |  \genblk1[0].CU   |convUnit             |   9375|
+|3     |    PE             |processingElement_79 |   4910|
+|4     |      FM           |floatMult_80         |    717|
+|5     |  \genblk1[10].CU  |convUnit_0           |   4607|
+|6     |    PE             |processingElement_77 |   1230|
+|7     |      FM           |floatMult_78         |    717|
+|8     |  \genblk1[11].CU  |convUnit_1           |   3935|
+|9     |    PE             |processingElement_75 |   1230|
+|10    |      FM           |floatMult_76         |    717|
+|11    |  \genblk1[12].CU  |convUnit_2           |   7873|
+|12    |    PE             |processingElement_73 |   4208|
+|13    |      FM           |floatMult_74         |    717|
+|14    |  \genblk1[13].CU  |convUnit_3           |   8018|
+|15    |    PE             |processingElement_71 |   4225|
+|16    |      FM           |floatMult_72         |    717|
+|17    |  \genblk1[14].CU  |convUnit_4           |   7905|
+|18    |    PE             |processingElement_69 |   4208|
+|19    |      FM           |floatMult_70         |    717|
+|20    |  \genblk1[15].CU  |convUnit_5           |   6404|
+|21    |    PE             |processingElement_67 |   4211|
+|22    |      FM           |floatMult_68         |    717|
+|23    |  \genblk1[16].CU  |convUnit_6           |   4255|
+|24    |    PE             |processingElement_65 |   1902|
+|25    |      FM           |floatMult_66         |    717|
+|26    |  \genblk1[17].CU  |convUnit_7           |   4044|
+|27    |    PE             |processingElement_63 |   1883|
+|28    |      FM           |floatMult_64         |    717|
+|29    |  \genblk1[18].CU  |convUnit_8           |   5149|
+|30    |    PE             |processingElement_61 |   1868|
+|31    |      FM           |floatMult_62         |    717|
+|32    |  \genblk1[19].CU  |convUnit_9           |   5311|
+|33    |    PE             |processingElement_59 |   1870|
+|34    |      FM           |floatMult_60         |    717|
+|35    |  \genblk1[1].CU   |convUnit_10          |   7702|
+|36    |    PE             |processingElement_57 |   4997|
+|37    |      FM           |floatMult_58         |    717|
+|38    |  \genblk1[20].CU  |convUnit_11          |   5697|
+|39    |    PE             |processingElement_55 |   1872|
+|40    |      FM           |floatMult_56         |    717|
+|41    |  \genblk1[21].CU  |convUnit_12          |   4259|
+|42    |    PE             |processingElement_53 |   1842|
+|43    |      FM           |floatMult_54         |    717|
+|44    |  \genblk1[22].CU  |convUnit_13          |   4379|
+|45    |    PE             |processingElement_51 |   1834|
+|46    |      FM           |floatMult_52         |    717|
+|47    |  \genblk1[23].CU  |convUnit_14          |   6120|
+|48    |    PE             |processingElement_49 |   1859|
+|49    |      FM           |floatMult_50         |    717|
+|50    |  \genblk1[24].CU  |convUnit_15          |   4439|
+|51    |    PE             |processingElement_47 |   1868|
+|52    |      FM           |floatMult_48         |    717|
+|53    |  \genblk1[25].CU  |convUnit_16          |   5845|
+|54    |    PE             |processingElement_45 |   1870|
+|55    |      FM           |floatMult_46         |    717|
+|56    |  \genblk1[26].CU  |convUnit_17          |   4892|
+|57    |    PE             |processingElement_43 |   2273|
+|58    |      FM           |floatMult_44         |    717|
+|59    |  \genblk1[27].CU  |convUnit_18          |   4426|
+|60    |    PE             |processingElement_41 |   1951|
+|61    |      FM           |floatMult_42         |    717|
+|62    |  \genblk1[2].CU   |convUnit_19          |   7473|
+|63    |    PE             |processingElement_39 |   4544|
+|64    |      FM           |floatMult_40         |    717|
+|65    |  \genblk1[3].CU   |convUnit_20          |   8081|
+|66    |    PE             |processingElement_37 |   4864|
+|67    |      FM           |floatMult_38         |    717|
+|68    |  \genblk1[4].CU   |convUnit_21          |   4475|
+|69    |    PE             |processingElement_35 |   1230|
+|70    |      FM           |floatMult_36         |    717|
+|71    |  \genblk1[5].CU   |convUnit_22          |   3935|
+|72    |    PE             |processingElement_33 |   1230|
+|73    |      FM           |floatMult_34         |    717|
+|74    |  \genblk1[6].CU   |convUnit_23          |   5759|
+|75    |    PE             |processingElement_31 |   1230|
+|76    |      FM           |floatMult_32         |    717|
+|77    |  \genblk1[7].CU   |convUnit_24          |   4515|
+|78    |    PE             |processingElement_29 |   1230|
+|79    |      FM           |floatMult_30         |    717|
+|80    |  \genblk1[8].CU   |convUnit_25          |   3967|
+|81    |    PE             |processingElement_27 |   1230|
+|82    |      FM           |floatMult_28         |    717|
+|83    |  \genblk1[9].CU   |convUnit_26          |   4319|
+|84    |    PE             |processingElement    |   1230|
+|85    |      FM           |floatMult            |    717|
++------+-------------------+---------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:42 ; elapsed = 00:09:49 . Memory (MB): peak = 1463.945 ; gain = 1215.539
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:41 ; elapsed = 00:09:47 . Memory (MB): peak = 1463.945 ; gain = 1182.234
+Synthesis Optimization Complete : Time (s): cpu = 00:05:42 ; elapsed = 00:09:50 . Memory (MB): peak = 1463.945 ; gain = 1215.539
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 61609 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 5 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 25312 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 224 instances
+  LD => LDCE: 25088 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:06:48 ; elapsed = 00:10:54 . Memory (MB): peak = 1475.016 ; gain = 1217.223
+write_checkpoint: Time (s): cpu = 00:00:45 ; elapsed = 00:00:28 . Memory (MB): peak = 1475.016 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1475.016 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 28 15:13:20 2020...

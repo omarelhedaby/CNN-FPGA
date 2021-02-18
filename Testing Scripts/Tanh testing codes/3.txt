@@ -1,0 +1,31 @@
+always @ (posedge clk) begin  
+
+       if(Finished ==1 || counter ==5)begin
+       Output[DATA_WIDTH*i +: DATA_WIDTH]=OutputTemp;
+       counter=0;
+     end
+       if(counter ==0)begin 
+       reset=1;
+        end 
+       else if (counter <5)begin
+        reset=0;end
+        counter=counter+1;
+   end
+
+
+
+add wave -position insertpoint  \
+sim:/UsingTheTanh/DATA_WIDTH \
+sim:/UsingTheTanh/nofinputs \
+sim:/UsingTheTanh/x \
+sim:/UsingTheTanh/clk \
+sim:/UsingTheTanh/reset \
+sim:/UsingTheTanh/Output \
+sim:/UsingTheTanh/OutputTemp \
+sim:/UsingTheTanh/i \
+sim:/UsingTheTanh/counter \
+sim:/UsingTheTanh/Finished \
+sim:/UsingTheTanh/counterInputs \
+sim:/UsingTheTanh/xTemp
+force -freeze sim:/UsingTheTanh/x 0011111100011001100110011001101000111111110010001111010111000011 0
+force -freeze sim:/UsingTheTanh/clk 1 0, 0 {50 ps} -r 100

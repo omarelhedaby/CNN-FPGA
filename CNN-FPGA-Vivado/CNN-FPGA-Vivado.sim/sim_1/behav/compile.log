@@ -1,0 +1,18 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/floatMult16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floatMult16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/floatAdd16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floatAdd16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/processingElement16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processingElement16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/RFselector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RFselector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/convUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/convLayerSingle.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convLayerSingle
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/convLayerMulti.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convLayerMulti
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.srcs/sim_1/imports/Integration first part/convLayerMulti_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convLayerMulti_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

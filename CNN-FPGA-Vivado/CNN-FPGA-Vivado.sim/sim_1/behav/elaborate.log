@@ -1,0 +1,20 @@
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 94c6f29089a0486590b79b7cc8fbf67b --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot convLayerMulti_TB_behav xil_defaultlib.convLayerMulti_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.RFselector(DATA_WIDTH=16,D=1,H=3...
+Compiling module xil_defaultlib.floatMult16
+Compiling module xil_defaultlib.floatAdd16
+Compiling module xil_defaultlib.processingElement16
+Compiling module xil_defaultlib.convUnit(D=1,F=5)
+Compiling module xil_defaultlib.convLayerSingle(DATA_WIDTH=16,D=...
+Compiling module xil_defaultlib.convLayerMulti_default
+Compiling module xil_defaultlib.convLayerMulti_TB
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot convLayerMulti_TB_behav

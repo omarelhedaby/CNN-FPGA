@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 09 19:57:44 2020
+# Process ID: 17152
+# Log file: C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/vivado.log
+# Journal file: C:/Users/Daniel/Desktop/CNN-FPGA-Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.xpr
+launch_simulation
+source convLayerMulti_TB.tcl
+restart
+run all
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top AvgPoolMulti_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source AvgPoolMulti_tb.tcl
+restart
+run all
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top convUnit_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source convUnit_TB.tcl
+restart
+run all
+close_sim
+remove_files {{C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.srcs/sources_1/imports/Integration first part/softmax_tb.v}}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top integrationFC [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top convLayerMulti_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source convLayerMulti_TB.tcl
+restart
+run all
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top integrationFC_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1

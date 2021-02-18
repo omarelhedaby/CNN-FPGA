@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2015.2 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="5" Path="C:/Users/Daniel/Desktop/CNN-FPGA-Vivado/CNN-FPGA-Vivado.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="94c6f29089a0486590b79b7cc8fbf67b"/>
+    <Option Name="Part" Val="xcku040-ffva1156-2-e"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="SimulatorLanguage" Val="Verilog"/>
+    <Option Name="BoardPart" Val="xilinx.com:kcu105:part0:1.0"/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/floatMult.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatMult.v"/>
+          <Attr Name="ImportTime" Val="1588498134"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/floatAdd.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatAdd.v"/>
+          <Attr Name="ImportTime" Val="1589274534"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/HyperBolicTangent.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/HyperBolicTangent.v"/>
+          <Attr Name="ImportTime" Val="1591585892"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/floatReciprocal.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatReciprocal.v"/>
+          <Attr Name="ImportTime" Val="1590042938"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/exponent.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/exponent.v"/>
+          <Attr Name="ImportTime" Val="1590041894"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/processingElement.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/processingElement.v"/>
+          <Attr Name="ImportTime" Val="1588611382"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/UsingTheTanh.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/UsingTheTanh.v"/>
+          <Attr Name="ImportTime" Val="1591585909"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/softmax.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/softmax.v"/>
+          <Attr Name="ImportTime" Val="1590046632"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/weightMemory.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/weightMemory.v"/>
+          <Attr Name="ImportTime" Val="1588998264"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/layer.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/layer.v"/>
+          <Attr Name="ImportTime" Val="1588612242"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/InegrationFCpart.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/InegrationFCpart.v"/>
+          <Attr Name="ImportTime" Val="1591594179"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/activationFunction.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/activationFunction.v"/>
+          <Attr Name="ImportTime" Val="1588576879"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/ANNfull.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/ANNfull.v"/>
+          <Attr Name="ImportTime" Val="1589045647"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/floatMult16.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatMult16.v"/>
+          <Attr Name="ImportTime" Val="1591661232"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/floatAdd16.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatAdd16.v"/>
+          <Attr Name="ImportTime" Val="1591661220"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/processingElement16.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/processingElement16.v"/>
+          <Attr Name="ImportTime" Val="1591661274"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/convUnit.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/convUnit.v"/>
+          <Attr Name="ImportTime" Val="1591661307"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/RFselector.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/RFselector.v"/>
+          <Attr Name="ImportTime" Val="1591635765"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/AvgUnit.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/AvgUnit.v"/>
+          <Attr Name="ImportTime" Val="1591661530"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/AvgPoolSingle.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/AvgPoolSingle.v"/>
+          <Attr Name="ImportTime" Val="1591205732"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/convLayerSingle.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/convLayerSingle.v"/>
+          <Attr Name="ImportTime" Val="1591449095"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/AvgPoolMulti.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/AvgPoolMulti.v"/>
+          <Attr Name="ImportTime" Val="1591273086"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/softmax_1.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/softmax_1.v"/>
+          <Attr Name="ImportTime" Val="1590929754"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/HyperBolicTangent16.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/HyperBolicTangent16.v"/>
+          <Attr Name="ImportTime" Val="1591661758"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/ConvLayer3.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/ConvLayer3.v"/>
+          <Attr Name="ImportTime" Val="1591671162"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/convLayerMulti.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/convLayerMulti.v"/>
+          <Attr Name="ImportTime" Val="1591635562"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/UsingTheTanh16.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/UsingTheTanh16.v"/>
+          <Attr Name="ImportTime" Val="1591661780"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/softmax_2.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/softmax_2.v"/>
+          <Attr Name="ImportTime" Val="1590929838"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Integration first part/IntegrationConvPart.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/IntegrationConvPart.v"/>
+          <Attr Name="ImportTime" Val="1591725033"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="integrationFC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/IntegrationFC_tb.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/IntegrationFC_tb.v"/>
+          <Attr Name="ImportTime" Val="1591594422"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/convLayerMulti_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/convLayerMulti_TB.v"/>
+          <Attr Name="ImportTime" Val="1591410872"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/convUnit_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/convUnit_TB.v"/>
+          <Attr Name="ImportTime" Val="1591661338"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/AvgPoolMulti_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/AvgPoolMulti_tb.v"/>
+          <Attr Name="ImportTime" Val="1591411500"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/HyperbolicTangent16_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/HyperbolicTangent16_TB.v"/>
+          <Attr Name="ImportTime" Val="1591661769"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/layer_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/layer_TB.v"/>
+          <Attr Name="ImportTime" Val="1588795589"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/HyperbolicTangent_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/HyperbolicTangent_TB.v"/>
+          <Attr Name="ImportTime" Val="1591585898"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/processingElement_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/processingElement_TB.v"/>
+          <Attr Name="ImportTime" Val="1588568765"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/convLayerSingle_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/convLayerSingle_TB.v"/>
+          <Attr Name="ImportTime" Val="1591053827"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/floatMult16_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatMult16_TB.v"/>
+          <Attr Name="ImportTime" Val="1591661246"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/AvgPoolSingle_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/AvgPoolSingle_tb.v"/>
+          <Attr Name="ImportTime" Val="1591205965"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/AvgUnit_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/AvgUnit_tb.v"/>
+          <Attr Name="ImportTime" Val="1591205322"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/AvgPoolMulti_tb2.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/AvgPoolMulti_tb2.v"/>
+          <Attr Name="ImportTime" Val="1591434058"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/UsingTheTanh_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/UsingTheTanh_TB.v"/>
+          <Attr Name="ImportTime" Val="1591585901"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/floatReciprocal_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatReciprocal_tb.v"/>
+          <Attr Name="ImportTime" Val="1590042622"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/exponent_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/exponent_tb.v"/>
+          <Attr Name="ImportTime" Val="1590042474"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/UsingTheTanh16_TB .v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/UsingTheTanh16_TB .v"/>
+          <Attr Name="ImportTime" Val="1591661790"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/processingElement16_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/processingElement16_TB.v"/>
+          <Attr Name="ImportTime" Val="1591661293"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/weightMemory_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/weightMemory_TB.v"/>
+          <Attr Name="ImportTime" Val="1588607121"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/floatAdd_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatAdd_TB.v"/>
+          <Attr Name="ImportTime" Val="1588614612"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/ANNfull_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/ANNfull_TB.v"/>
+          <Attr Name="ImportTime" Val="1589046182"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/activationFunction_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/activationFunction_TB.v"/>
+          <Attr Name="ImportTime" Val="1588572490"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/floatMult_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatMult_TB.v"/>
+          <Attr Name="ImportTime" Val="1588498112"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Integration first part/floatAdd16_TB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Integration first part/floatAdd16_TB.v"/>
+          <Attr Name="ImportTime" Val="1591661252"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="integrationFC_tb"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="Questa">
+      <Option Name="Description" Val="Questa Advanced Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+    <Simulator Name="Riviera">
+      <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="9">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcku040-ffva1156-2-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcku040-ffva1156-2-e" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+  </Runs>
+</Project>

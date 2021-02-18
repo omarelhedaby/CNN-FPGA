@@ -1,0 +1,720 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Jun 08 13:01:52 2020
+# Process ID: 20392
+# Log file: C:/Users/Daniel/Desktop/AvgPool/AvgPool.runs/synth_1/avgPoolSingle.vds
+# Journal file: C:/Users/Daniel/Desktop/AvgPool/AvgPool.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source avgPoolSingle.tcl -notrace
+Command: synth_design -top avgPoolSingle -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 281.922 ; gain = 33.137
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'avgPoolSingle' [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/AvgPoolSingle.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter InputH bound to: 28 - type: integer 
+	Parameter InputW bound to: 28 - type: integer 
+	Parameter Depth bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'AvgUnit' [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/AvgUnit.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'floatAdd' [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatAdd.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatAdd' (1#1) [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatAdd.v:3]
+INFO: [Synth 8-638] synthesizing module 'floatMult' [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatMult.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatMult' (2#1) [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatMult.v:3]
+INFO: [Synth 8-256] done synthesizing module 'AvgUnit' (3#1) [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/AvgUnit.v:3]
+INFO: [Synth 8-256] done synthesizing module 'avgPoolSingle' (4#1) [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/AvgPoolSingle.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 306.910 ; gain = 58.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 306.910 ; gain = 58.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 306.910 ; gain = 58.125
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatMult.v:19]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Daniel/Desktop/AvgPool/AvgPool.srcs/sources_1/imports/Avg Pooling Code - Copy/floatMult.v:19]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 394.102 ; gain = 145.316
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |AvgUnit       |         196|      4854|
++------+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 588   
+	   3 Input     12 Bit       Adders := 1176  
+	   3 Input      8 Bit       Adders := 1176  
+	   2 Input      5 Bit       Adders := 588   
+	   4 Input      5 Bit       Adders := 196   
++---XORs : 
+	   2 Input      1 Bit         XORs := 784   
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1960  
+	   2 Input     16 Bit        Muxes := 784   
+	   2 Input     11 Bit        Muxes := 2940  
+	   2 Input     10 Bit        Muxes := 7644  
+	  13 Input      5 Bit        Muxes := 588   
+	   2 Input      5 Bit        Muxes := 1764  
+	   5 Input      5 Bit        Muxes := 196   
+	   2 Input      1 Bit        Muxes := 1176  
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module floatAdd__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 5     
+	   2 Input     10 Bit        Muxes := 13    
+	  13 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module floatAdd__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 5     
+	   2 Input     10 Bit        Muxes := 13    
+	  13 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module floatAdd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 5     
+	   2 Input     10 Bit        Muxes := 13    
+	  13 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module floatMult 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 10    
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+	   5 Input      5 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 672.055 ; gain = 423.270
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 673.328 ; gain = 424.543
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 673.328 ; gain = 424.543
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |AvgUnit       |         196|      5224|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|floatMult   | A*B         | No           | 11     | 11     | 48     | 25     | 22     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 836.480 ; gain = 587.695
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 836.480 ; gain = 587.695
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |AvgUnit       |         196|      2576|
++------+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 836.480 ; gain = 587.695
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 836.480 ; gain = 587.695
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |AvgUnit       |         196|      2576|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 1037.551 ; gain = 788.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 1105.027 ; gain = 856.242
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1105.027 ; gain = 856.242
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 1105.027 ; gain = 856.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 1105.027 ; gain = 856.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:23 ; elapsed = 00:01:30 . Memory (MB): peak = 1105.027 ; gain = 856.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY8  |  3528|
+|2     |DSP48E2 |   196|
+|3     |LUT1    |  3920|
+|4     |LUT2    | 29988|
+|5     |LUT3    | 20188|
+|6     |LUT4    | 16464|
+|7     |LUT5    | 22932|
+|8     |LUT6    | 82908|
+|9     |IBUF    | 12544|
+|10    |OBUF    |  3136|
++------+--------+------+
+
+Report Instance Areas: 
++------+-------------------------------+--------------+-------+
+|      |Instance                       |Module        |Cells  |
++------+-------------------------------+--------------+-------+
+|1     |top                            |              | 195804|
+|2     |  \genblk1[0].genblk1[0].AU    |AvgUnit       |    221|
+|3     |    FM                         |floatMult_389 |    221|
+|4     |  \genblk1[0].genblk1[10].AU   |AvgUnit_0     |    221|
+|5     |    FM                         |floatMult_388 |    221|
+|6     |  \genblk1[0].genblk1[12].AU   |AvgUnit_1     |    221|
+|7     |    FM                         |floatMult_387 |    221|
+|8     |  \genblk1[0].genblk1[14].AU   |AvgUnit_2     |    221|
+|9     |    FM                         |floatMult_386 |    221|
+|10    |  \genblk1[0].genblk1[16].AU   |AvgUnit_3     |    221|
+|11    |    FM                         |floatMult_385 |    221|
+|12    |  \genblk1[0].genblk1[18].AU   |AvgUnit_4     |    221|
+|13    |    FM                         |floatMult_384 |    221|
+|14    |  \genblk1[0].genblk1[20].AU   |AvgUnit_5     |    221|
+|15    |    FM                         |floatMult_383 |    221|
+|16    |  \genblk1[0].genblk1[22].AU   |AvgUnit_6     |    221|
+|17    |    FM                         |floatMult_382 |    221|
+|18    |  \genblk1[0].genblk1[24].AU   |AvgUnit_7     |    221|
+|19    |    FM                         |floatMult_381 |    221|
+|20    |  \genblk1[0].genblk1[26].AU   |AvgUnit_8     |    221|
+|21    |    FM                         |floatMult_380 |    221|
+|22    |  \genblk1[0].genblk1[2].AU    |AvgUnit_9     |    221|
+|23    |    FM                         |floatMult_379 |    221|
+|24    |  \genblk1[0].genblk1[4].AU    |AvgUnit_10    |    221|
+|25    |    FM                         |floatMult_378 |    221|
+|26    |  \genblk1[0].genblk1[6].AU    |AvgUnit_11    |    221|
+|27    |    FM                         |floatMult_377 |    221|
+|28    |  \genblk1[0].genblk1[8].AU    |AvgUnit_12    |    221|
+|29    |    FM                         |floatMult_376 |    221|
+|30    |  \genblk1[10].genblk1[0].AU   |AvgUnit_13    |    221|
+|31    |    FM                         |floatMult_375 |    221|
+|32    |  \genblk1[10].genblk1[10].AU  |AvgUnit_14    |    221|
+|33    |    FM                         |floatMult_374 |    221|
+|34    |  \genblk1[10].genblk1[12].AU  |AvgUnit_15    |    221|
+|35    |    FM                         |floatMult_373 |    221|
+|36    |  \genblk1[10].genblk1[14].AU  |AvgUnit_16    |    221|
+|37    |    FM                         |floatMult_372 |    221|
+|38    |  \genblk1[10].genblk1[16].AU  |AvgUnit_17    |    221|
+|39    |    FM                         |floatMult_371 |    221|
+|40    |  \genblk1[10].genblk1[18].AU  |AvgUnit_18    |    221|
+|41    |    FM                         |floatMult_370 |    221|
+|42    |  \genblk1[10].genblk1[20].AU  |AvgUnit_19    |    221|
+|43    |    FM                         |floatMult_369 |    221|
+|44    |  \genblk1[10].genblk1[22].AU  |AvgUnit_20    |    221|
+|45    |    FM                         |floatMult_368 |    221|
+|46    |  \genblk1[10].genblk1[24].AU  |AvgUnit_21    |    221|
+|47    |    FM                         |floatMult_367 |    221|
+|48    |  \genblk1[10].genblk1[26].AU  |AvgUnit_22    |    221|
+|49    |    FM                         |floatMult_366 |    221|
+|50    |  \genblk1[10].genblk1[2].AU   |AvgUnit_23    |    221|
+|51    |    FM                         |floatMult_365 |    221|
+|52    |  \genblk1[10].genblk1[4].AU   |AvgUnit_24    |    221|
+|53    |    FM                         |floatMult_364 |    221|
+|54    |  \genblk1[10].genblk1[6].AU   |AvgUnit_25    |    221|
+|55    |    FM                         |floatMult_363 |    221|
+|56    |  \genblk1[10].genblk1[8].AU   |AvgUnit_26    |    221|
+|57    |    FM                         |floatMult_362 |    221|
+|58    |  \genblk1[12].genblk1[0].AU   |AvgUnit_27    |    221|
+|59    |    FM                         |floatMult_361 |    221|
+|60    |  \genblk1[12].genblk1[10].AU  |AvgUnit_28    |    221|
+|61    |    FM                         |floatMult_360 |    221|
+|62    |  \genblk1[12].genblk1[12].AU  |AvgUnit_29    |    221|
+|63    |    FM                         |floatMult_359 |    221|
+|64    |  \genblk1[12].genblk1[14].AU  |AvgUnit_30    |    221|
+|65    |    FM                         |floatMult_358 |    221|
+|66    |  \genblk1[12].genblk1[16].AU  |AvgUnit_31    |    221|
+|67    |    FM                         |floatMult_357 |    221|
+|68    |  \genblk1[12].genblk1[18].AU  |AvgUnit_32    |    221|
+|69    |    FM                         |floatMult_356 |    221|
+|70    |  \genblk1[12].genblk1[20].AU  |AvgUnit_33    |    221|
+|71    |    FM                         |floatMult_355 |    221|
+|72    |  \genblk1[12].genblk1[22].AU  |AvgUnit_34    |    221|
+|73    |    FM                         |floatMult_354 |    221|
+|74    |  \genblk1[12].genblk1[24].AU  |AvgUnit_35    |    221|
+|75    |    FM                         |floatMult_353 |    221|
+|76    |  \genblk1[12].genblk1[26].AU  |AvgUnit_36    |    221|
+|77    |    FM                         |floatMult_352 |    221|
+|78    |  \genblk1[12].genblk1[2].AU   |AvgUnit_37    |    221|
+|79    |    FM                         |floatMult_351 |    221|
+|80    |  \genblk1[12].genblk1[4].AU   |AvgUnit_38    |    221|
+|81    |    FM                         |floatMult_350 |    221|
+|82    |  \genblk1[12].genblk1[6].AU   |AvgUnit_39    |    221|
+|83    |    FM                         |floatMult_349 |    221|
+|84    |  \genblk1[12].genblk1[8].AU   |AvgUnit_40    |    221|
+|85    |    FM                         |floatMult_348 |    221|
+|86    |  \genblk1[14].genblk1[0].AU   |AvgUnit_41    |    221|
+|87    |    FM                         |floatMult_347 |    221|
+|88    |  \genblk1[14].genblk1[10].AU  |AvgUnit_42    |    221|
+|89    |    FM                         |floatMult_346 |    221|
+|90    |  \genblk1[14].genblk1[12].AU  |AvgUnit_43    |    221|
+|91    |    FM                         |floatMult_345 |    221|
+|92    |  \genblk1[14].genblk1[14].AU  |AvgUnit_44    |    221|
+|93    |    FM                         |floatMult_344 |    221|
+|94    |  \genblk1[14].genblk1[16].AU  |AvgUnit_45    |    221|
+|95    |    FM                         |floatMult_343 |    221|
+|96    |  \genblk1[14].genblk1[18].AU  |AvgUnit_46    |    221|
+|97    |    FM                         |floatMult_342 |    221|
+|98    |  \genblk1[14].genblk1[20].AU  |AvgUnit_47    |    221|
+|99    |    FM                         |floatMult_341 |    221|
+|100   |  \genblk1[14].genblk1[22].AU  |AvgUnit_48    |    221|
+|101   |    FM                         |floatMult_340 |    221|
+|102   |  \genblk1[14].genblk1[24].AU  |AvgUnit_49    |    221|
+|103   |    FM                         |floatMult_339 |    221|
+|104   |  \genblk1[14].genblk1[26].AU  |AvgUnit_50    |    221|
+|105   |    FM                         |floatMult_338 |    221|
+|106   |  \genblk1[14].genblk1[2].AU   |AvgUnit_51    |    221|
+|107   |    FM                         |floatMult_337 |    221|
+|108   |  \genblk1[14].genblk1[4].AU   |AvgUnit_52    |    221|
+|109   |    FM                         |floatMult_336 |    221|
+|110   |  \genblk1[14].genblk1[6].AU   |AvgUnit_53    |    221|
+|111   |    FM                         |floatMult_335 |    221|
+|112   |  \genblk1[14].genblk1[8].AU   |AvgUnit_54    |    221|
+|113   |    FM                         |floatMult_334 |    221|
+|114   |  \genblk1[16].genblk1[0].AU   |AvgUnit_55    |    221|
+|115   |    FM                         |floatMult_333 |    221|
+|116   |  \genblk1[16].genblk1[10].AU  |AvgUnit_56    |    221|
+|117   |    FM                         |floatMult_332 |    221|
+|118   |  \genblk1[16].genblk1[12].AU  |AvgUnit_57    |    221|
+|119   |    FM                         |floatMult_331 |    221|
+|120   |  \genblk1[16].genblk1[14].AU  |AvgUnit_58    |    221|
+|121   |    FM                         |floatMult_330 |    221|
+|122   |  \genblk1[16].genblk1[16].AU  |AvgUnit_59    |    221|
+|123   |    FM                         |floatMult_329 |    221|
+|124   |  \genblk1[16].genblk1[18].AU  |AvgUnit_60    |    221|
+|125   |    FM                         |floatMult_328 |    221|
+|126   |  \genblk1[16].genblk1[20].AU  |AvgUnit_61    |    221|
+|127   |    FM                         |floatMult_327 |    221|
+|128   |  \genblk1[16].genblk1[22].AU  |AvgUnit_62    |    221|
+|129   |    FM                         |floatMult_326 |    221|
+|130   |  \genblk1[16].genblk1[24].AU  |AvgUnit_63    |    221|
+|131   |    FM                         |floatMult_325 |    221|
+|132   |  \genblk1[16].genblk1[26].AU  |AvgUnit_64    |    221|
+|133   |    FM                         |floatMult_324 |    221|
+|134   |  \genblk1[16].genblk1[2].AU   |AvgUnit_65    |    221|
+|135   |    FM                         |floatMult_323 |    221|
+|136   |  \genblk1[16].genblk1[4].AU   |AvgUnit_66    |    221|
+|137   |    FM                         |floatMult_322 |    221|
+|138   |  \genblk1[16].genblk1[6].AU   |AvgUnit_67    |    221|
+|139   |    FM                         |floatMult_321 |    221|
+|140   |  \genblk1[16].genblk1[8].AU   |AvgUnit_68    |    221|
+|141   |    FM                         |floatMult_320 |    221|
+|142   |  \genblk1[18].genblk1[0].AU   |AvgUnit_69    |    221|
+|143   |    FM                         |floatMult_319 |    221|
+|144   |  \genblk1[18].genblk1[10].AU  |AvgUnit_70    |    221|
+|145   |    FM                         |floatMult_318 |    221|
+|146   |  \genblk1[18].genblk1[12].AU  |AvgUnit_71    |    221|
+|147   |    FM                         |floatMult_317 |    221|
+|148   |  \genblk1[18].genblk1[14].AU  |AvgUnit_72    |    221|
+|149   |    FM                         |floatMult_316 |    221|
+|150   |  \genblk1[18].genblk1[16].AU  |AvgUnit_73    |    221|
+|151   |    FM                         |floatMult_315 |    221|
+|152   |  \genblk1[18].genblk1[18].AU  |AvgUnit_74    |    221|
+|153   |    FM                         |floatMult_314 |    221|
+|154   |  \genblk1[18].genblk1[20].AU  |AvgUnit_75    |    221|
+|155   |    FM                         |floatMult_313 |    221|
+|156   |  \genblk1[18].genblk1[22].AU  |AvgUnit_76    |    221|
+|157   |    FM                         |floatMult_312 |    221|
+|158   |  \genblk1[18].genblk1[24].AU  |AvgUnit_77    |    221|
+|159   |    FM                         |floatMult_311 |    221|
+|160   |  \genblk1[18].genblk1[26].AU  |AvgUnit_78    |    221|
+|161   |    FM                         |floatMult_310 |    221|
+|162   |  \genblk1[18].genblk1[2].AU   |AvgUnit_79    |    221|
+|163   |    FM                         |floatMult_309 |    221|
+|164   |  \genblk1[18].genblk1[4].AU   |AvgUnit_80    |    221|
+|165   |    FM                         |floatMult_308 |    221|
+|166   |  \genblk1[18].genblk1[6].AU   |AvgUnit_81    |    221|
+|167   |    FM                         |floatMult_307 |    221|
+|168   |  \genblk1[18].genblk1[8].AU   |AvgUnit_82    |    221|
+|169   |    FM                         |floatMult_306 |    221|
+|170   |  \genblk1[20].genblk1[0].AU   |AvgUnit_83    |    221|
+|171   |    FM                         |floatMult_305 |    221|
+|172   |  \genblk1[20].genblk1[10].AU  |AvgUnit_84    |    221|
+|173   |    FM                         |floatMult_304 |    221|
+|174   |  \genblk1[20].genblk1[12].AU  |AvgUnit_85    |    221|
+|175   |    FM                         |floatMult_303 |    221|
+|176   |  \genblk1[20].genblk1[14].AU  |AvgUnit_86    |    221|
+|177   |    FM                         |floatMult_302 |    221|
+|178   |  \genblk1[20].genblk1[16].AU  |AvgUnit_87    |    221|
+|179   |    FM                         |floatMult_301 |    221|
+|180   |  \genblk1[20].genblk1[18].AU  |AvgUnit_88    |    221|
+|181   |    FM                         |floatMult_300 |    221|
+|182   |  \genblk1[20].genblk1[20].AU  |AvgUnit_89    |    221|
+|183   |    FM                         |floatMult_299 |    221|
+|184   |  \genblk1[20].genblk1[22].AU  |AvgUnit_90    |    221|
+|185   |    FM                         |floatMult_298 |    221|
+|186   |  \genblk1[20].genblk1[24].AU  |AvgUnit_91    |    221|
+|187   |    FM                         |floatMult_297 |    221|
+|188   |  \genblk1[20].genblk1[26].AU  |AvgUnit_92    |    221|
+|189   |    FM                         |floatMult_296 |    221|
+|190   |  \genblk1[20].genblk1[2].AU   |AvgUnit_93    |    221|
+|191   |    FM                         |floatMult_295 |    221|
+|192   |  \genblk1[20].genblk1[4].AU   |AvgUnit_94    |    221|
+|193   |    FM                         |floatMult_294 |    221|
+|194   |  \genblk1[20].genblk1[6].AU   |AvgUnit_95    |    221|
+|195   |    FM                         |floatMult_293 |    221|
+|196   |  \genblk1[20].genblk1[8].AU   |AvgUnit_96    |    221|
+|197   |    FM                         |floatMult_292 |    221|
+|198   |  \genblk1[22].genblk1[0].AU   |AvgUnit_97    |    221|
+|199   |    FM                         |floatMult_291 |    221|
+|200   |  \genblk1[22].genblk1[10].AU  |AvgUnit_98    |    221|
+|201   |    FM                         |floatMult_290 |    221|
+|202   |  \genblk1[22].genblk1[12].AU  |AvgUnit_99    |    221|
+|203   |    FM                         |floatMult_289 |    221|
+|204   |  \genblk1[22].genblk1[14].AU  |AvgUnit_100   |    221|
+|205   |    FM                         |floatMult_288 |    221|
+|206   |  \genblk1[22].genblk1[16].AU  |AvgUnit_101   |    221|
+|207   |    FM                         |floatMult_287 |    221|
+|208   |  \genblk1[22].genblk1[18].AU  |AvgUnit_102   |    221|
+|209   |    FM                         |floatMult_286 |    221|
+|210   |  \genblk1[22].genblk1[20].AU  |AvgUnit_103   |    221|
+|211   |    FM                         |floatMult_285 |    221|
+|212   |  \genblk1[22].genblk1[22].AU  |AvgUnit_104   |    221|
+|213   |    FM                         |floatMult_284 |    221|
+|214   |  \genblk1[22].genblk1[24].AU  |AvgUnit_105   |    221|
+|215   |    FM                         |floatMult_283 |    221|
+|216   |  \genblk1[22].genblk1[26].AU  |AvgUnit_106   |    221|
+|217   |    FM                         |floatMult_282 |    221|
+|218   |  \genblk1[22].genblk1[2].AU   |AvgUnit_107   |    221|
+|219   |    FM                         |floatMult_281 |    221|
+|220   |  \genblk1[22].genblk1[4].AU   |AvgUnit_108   |    221|
+|221   |    FM                         |floatMult_280 |    221|
+|222   |  \genblk1[22].genblk1[6].AU   |AvgUnit_109   |    221|
+|223   |    FM                         |floatMult_279 |    221|
+|224   |  \genblk1[22].genblk1[8].AU   |AvgUnit_110   |    221|
+|225   |    FM                         |floatMult_278 |    221|
+|226   |  \genblk1[24].genblk1[0].AU   |AvgUnit_111   |    221|
+|227   |    FM                         |floatMult_277 |    221|
+|228   |  \genblk1[24].genblk1[10].AU  |AvgUnit_112   |    221|
+|229   |    FM                         |floatMult_276 |    221|
+|230   |  \genblk1[24].genblk1[12].AU  |AvgUnit_113   |    221|
+|231   |    FM                         |floatMult_275 |    221|
+|232   |  \genblk1[24].genblk1[14].AU  |AvgUnit_114   |    221|
+|233   |    FM                         |floatMult_274 |    221|
+|234   |  \genblk1[24].genblk1[16].AU  |AvgUnit_115   |    221|
+|235   |    FM                         |floatMult_273 |    221|
+|236   |  \genblk1[24].genblk1[18].AU  |AvgUnit_116   |    221|
+|237   |    FM                         |floatMult_272 |    221|
+|238   |  \genblk1[24].genblk1[20].AU  |AvgUnit_117   |    221|
+|239   |    FM                         |floatMult_271 |    221|
+|240   |  \genblk1[24].genblk1[22].AU  |AvgUnit_118   |    221|
+|241   |    FM                         |floatMult_270 |    221|
+|242   |  \genblk1[24].genblk1[24].AU  |AvgUnit_119   |    221|
+|243   |    FM                         |floatMult_269 |    221|
+|244   |  \genblk1[24].genblk1[26].AU  |AvgUnit_120   |    221|
+|245   |    FM                         |floatMult_268 |    221|
+|246   |  \genblk1[24].genblk1[2].AU   |AvgUnit_121   |    221|
+|247   |    FM                         |floatMult_267 |    221|
+|248   |  \genblk1[24].genblk1[4].AU   |AvgUnit_122   |    221|
+|249   |    FM                         |floatMult_266 |    221|
+|250   |  \genblk1[24].genblk1[6].AU   |AvgUnit_123   |    221|
+|251   |    FM                         |floatMult_265 |    221|
+|252   |  \genblk1[24].genblk1[8].AU   |AvgUnit_124   |    221|
+|253   |    FM                         |floatMult_264 |    221|
+|254   |  \genblk1[26].genblk1[0].AU   |AvgUnit_125   |    221|
+|255   |    FM                         |floatMult_263 |    221|
+|256   |  \genblk1[26].genblk1[10].AU  |AvgUnit_126   |    221|
+|257   |    FM                         |floatMult_262 |    221|
+|258   |  \genblk1[26].genblk1[12].AU  |AvgUnit_127   |    221|
+|259   |    FM                         |floatMult_261 |    221|
+|260   |  \genblk1[26].genblk1[14].AU  |AvgUnit_128   |    221|
+|261   |    FM                         |floatMult_260 |    221|
+|262   |  \genblk1[26].genblk1[16].AU  |AvgUnit_129   |    221|
+|263   |    FM                         |floatMult_259 |    221|
+|264   |  \genblk1[26].genblk1[18].AU  |AvgUnit_130   |    221|
+|265   |    FM                         |floatMult_258 |    221|
+|266   |  \genblk1[26].genblk1[20].AU  |AvgUnit_131   |    221|
+|267   |    FM                         |floatMult_257 |    221|
+|268   |  \genblk1[26].genblk1[22].AU  |AvgUnit_132   |    221|
+|269   |    FM                         |floatMult_256 |    221|
+|270   |  \genblk1[26].genblk1[24].AU  |AvgUnit_133   |    221|
+|271   |    FM                         |floatMult_255 |    221|
+|272   |  \genblk1[26].genblk1[26].AU  |AvgUnit_134   |    221|
+|273   |    FM                         |floatMult_254 |    221|
+|274   |  \genblk1[26].genblk1[2].AU   |AvgUnit_135   |    221|
+|275   |    FM                         |floatMult_253 |    221|
+|276   |  \genblk1[26].genblk1[4].AU   |AvgUnit_136   |    221|
+|277   |    FM                         |floatMult_252 |    221|
+|278   |  \genblk1[26].genblk1[6].AU   |AvgUnit_137   |    221|
+|279   |    FM                         |floatMult_251 |    221|
+|280   |  \genblk1[26].genblk1[8].AU   |AvgUnit_138   |    221|
+|281   |    FM                         |floatMult_250 |    221|
+|282   |  \genblk1[2].genblk1[0].AU    |AvgUnit_139   |    221|
+|283   |    FM                         |floatMult_249 |    221|
+|284   |  \genblk1[2].genblk1[10].AU   |AvgUnit_140   |    221|
+|285   |    FM                         |floatMult_248 |    221|
+|286   |  \genblk1[2].genblk1[12].AU   |AvgUnit_141   |    221|
+|287   |    FM                         |floatMult_247 |    221|
+|288   |  \genblk1[2].genblk1[14].AU   |AvgUnit_142   |    221|
+|289   |    FM                         |floatMult_246 |    221|
+|290   |  \genblk1[2].genblk1[16].AU   |AvgUnit_143   |    221|
+|291   |    FM                         |floatMult_245 |    221|
+|292   |  \genblk1[2].genblk1[18].AU   |AvgUnit_144   |    221|
+|293   |    FM                         |floatMult_244 |    221|
+|294   |  \genblk1[2].genblk1[20].AU   |AvgUnit_145   |    221|
+|295   |    FM                         |floatMult_243 |    221|
+|296   |  \genblk1[2].genblk1[22].AU   |AvgUnit_146   |    221|
+|297   |    FM                         |floatMult_242 |    221|
+|298   |  \genblk1[2].genblk1[24].AU   |AvgUnit_147   |    221|
+|299   |    FM                         |floatMult_241 |    221|
+|300   |  \genblk1[2].genblk1[26].AU   |AvgUnit_148   |    221|
+|301   |    FM                         |floatMult_240 |    221|
+|302   |  \genblk1[2].genblk1[2].AU    |AvgUnit_149   |    221|
+|303   |    FM                         |floatMult_239 |    221|
+|304   |  \genblk1[2].genblk1[4].AU    |AvgUnit_150   |    221|
+|305   |    FM                         |floatMult_238 |    221|
+|306   |  \genblk1[2].genblk1[6].AU    |AvgUnit_151   |    221|
+|307   |    FM                         |floatMult_237 |    221|
+|308   |  \genblk1[2].genblk1[8].AU    |AvgUnit_152   |    221|
+|309   |    FM                         |floatMult_236 |    221|
+|310   |  \genblk1[4].genblk1[0].AU    |AvgUnit_153   |    221|
+|311   |    FM                         |floatMult_235 |    221|
+|312   |  \genblk1[4].genblk1[10].AU   |AvgUnit_154   |    221|
+|313   |    FM                         |floatMult_234 |    221|
+|314   |  \genblk1[4].genblk1[12].AU   |AvgUnit_155   |    221|
+|315   |    FM                         |floatMult_233 |    221|
+|316   |  \genblk1[4].genblk1[14].AU   |AvgUnit_156   |    221|
+|317   |    FM                         |floatMult_232 |    221|
+|318   |  \genblk1[4].genblk1[16].AU   |AvgUnit_157   |    221|
+|319   |    FM                         |floatMult_231 |    221|
+|320   |  \genblk1[4].genblk1[18].AU   |AvgUnit_158   |    221|
+|321   |    FM                         |floatMult_230 |    221|
+|322   |  \genblk1[4].genblk1[20].AU   |AvgUnit_159   |    221|
+|323   |    FM                         |floatMult_229 |    221|
+|324   |  \genblk1[4].genblk1[22].AU   |AvgUnit_160   |    221|
+|325   |    FM                         |floatMult_228 |    221|
+|326   |  \genblk1[4].genblk1[24].AU   |AvgUnit_161   |    221|
+|327   |    FM                         |floatMult_227 |    221|
+|328   |  \genblk1[4].genblk1[26].AU   |AvgUnit_162   |    221|
+|329   |    FM                         |floatMult_226 |    221|
+|330   |  \genblk1[4].genblk1[2].AU    |AvgUnit_163   |    221|
+|331   |    FM                         |floatMult_225 |    221|
+|332   |  \genblk1[4].genblk1[4].AU    |AvgUnit_164   |    221|
+|333   |    FM                         |floatMult_224 |    221|
+|334   |  \genblk1[4].genblk1[6].AU    |AvgUnit_165   |    221|
+|335   |    FM                         |floatMult_223 |    221|
+|336   |  \genblk1[4].genblk1[8].AU    |AvgUnit_166   |    221|
+|337   |    FM                         |floatMult_222 |    221|
+|338   |  \genblk1[6].genblk1[0].AU    |AvgUnit_167   |    221|
+|339   |    FM                         |floatMult_221 |    221|
+|340   |  \genblk1[6].genblk1[10].AU   |AvgUnit_168   |    221|
+|341   |    FM                         |floatMult_220 |    221|
+|342   |  \genblk1[6].genblk1[12].AU   |AvgUnit_169   |    221|
+|343   |    FM                         |floatMult_219 |    221|
+|344   |  \genblk1[6].genblk1[14].AU   |AvgUnit_170   |    221|
+|345   |    FM                         |floatMult_218 |    221|
+|346   |  \genblk1[6].genblk1[16].AU   |AvgUnit_171   |    221|
+|347   |    FM                         |floatMult_217 |    221|
+|348   |  \genblk1[6].genblk1[18].AU   |AvgUnit_172   |    221|
+|349   |    FM                         |floatMult_216 |    221|
+|350   |  \genblk1[6].genblk1[20].AU   |AvgUnit_173   |    221|
+|351   |    FM                         |floatMult_215 |    221|
+|352   |  \genblk1[6].genblk1[22].AU   |AvgUnit_174   |    221|
+|353   |    FM                         |floatMult_214 |    221|
+|354   |  \genblk1[6].genblk1[24].AU   |AvgUnit_175   |    221|
+|355   |    FM                         |floatMult_213 |    221|
+|356   |  \genblk1[6].genblk1[26].AU   |AvgUnit_176   |    221|
+|357   |    FM                         |floatMult_212 |    221|
+|358   |  \genblk1[6].genblk1[2].AU    |AvgUnit_177   |    221|
+|359   |    FM                         |floatMult_211 |    221|
+|360   |  \genblk1[6].genblk1[4].AU    |AvgUnit_178   |    221|
+|361   |    FM                         |floatMult_210 |    221|
+|362   |  \genblk1[6].genblk1[6].AU    |AvgUnit_179   |    221|
+|363   |    FM                         |floatMult_209 |    221|
+|364   |  \genblk1[6].genblk1[8].AU    |AvgUnit_180   |    221|
+|365   |    FM                         |floatMult_208 |    221|
+|366   |  \genblk1[8].genblk1[0].AU    |AvgUnit_181   |    221|
+|367   |    FM                         |floatMult_207 |    221|
+|368   |  \genblk1[8].genblk1[10].AU   |AvgUnit_182   |    221|
+|369   |    FM                         |floatMult_206 |    221|
+|370   |  \genblk1[8].genblk1[12].AU   |AvgUnit_183   |    221|
+|371   |    FM                         |floatMult_205 |    221|
+|372   |  \genblk1[8].genblk1[14].AU   |AvgUnit_184   |    221|
+|373   |    FM                         |floatMult_204 |    221|
+|374   |  \genblk1[8].genblk1[16].AU   |AvgUnit_185   |    221|
+|375   |    FM                         |floatMult_203 |    221|
+|376   |  \genblk1[8].genblk1[18].AU   |AvgUnit_186   |    221|
+|377   |    FM                         |floatMult_202 |    221|
+|378   |  \genblk1[8].genblk1[20].AU   |AvgUnit_187   |    221|
+|379   |    FM                         |floatMult_201 |    221|
+|380   |  \genblk1[8].genblk1[22].AU   |AvgUnit_188   |    221|
+|381   |    FM                         |floatMult_200 |    221|
+|382   |  \genblk1[8].genblk1[24].AU   |AvgUnit_189   |    221|
+|383   |    FM                         |floatMult_199 |    221|
+|384   |  \genblk1[8].genblk1[26].AU   |AvgUnit_190   |    221|
+|385   |    FM                         |floatMult_198 |    221|
+|386   |  \genblk1[8].genblk1[2].AU    |AvgUnit_191   |    221|
+|387   |    FM                         |floatMult_197 |    221|
+|388   |  \genblk1[8].genblk1[4].AU    |AvgUnit_192   |    221|
+|389   |    FM                         |floatMult_196 |    221|
+|390   |  \genblk1[8].genblk1[6].AU    |AvgUnit_193   |    221|
+|391   |    FM                         |floatMult_195 |    221|
+|392   |  \genblk1[8].genblk1[8].AU    |AvgUnit_194   |    221|
+|393   |    FM                         |floatMult     |    221|
++------+-------------------------------+--------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:36 ; elapsed = 00:01:45 . Memory (MB): peak = 1105.027 ; gain = 856.242
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:35 ; elapsed = 00:01:42 . Memory (MB): peak = 1105.027 ; gain = 823.105
+Synthesis Optimization Complete : Time (s): cpu = 00:01:36 ; elapsed = 00:01:45 . Memory (MB): peak = 1105.027 ; gain = 856.242
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 12740 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 6 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12740 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 196 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 12544 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:28 ; elapsed = 00:02:36 . Memory (MB): peak = 1436.664 ; gain = 1178.492
+write_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 1467.590 ; gain = 30.926
+report_utilization: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1467.590 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 08 13:04:55 2020...

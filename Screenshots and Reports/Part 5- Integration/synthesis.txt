@@ -1,0 +1,1889 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jun  9 18:22:11 2020
+# Process ID: 12704
+# Current directory: D:/University/Semester6/Logic-2/project_2/project_2.runs/synth_1
+# Command line: vivado.exe -log integrationFC.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source integrationFC.tcl
+# Log file: D:/University/Semester6/Logic-2/project_2/project_2.runs/synth_1/integrationFC.vds
+# Journal file: D:/University/Semester6/Logic-2/project_2/project_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source integrationFC.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 354.633 ; gain = 77.750
+Command: synth_design -top integrationFC -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12540 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 563.879 ; gain = 185.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'integrationFC' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/InegrationFCpart.v:2]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter IntIn bound to: 120 - type: integer 
+	Parameter FC_1_out bound to: 84 - type: integer 
+	Parameter FC_2_out bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'weightMemory' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightMemory.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter INPUT_NODES bound to: 120 - type: integer 
+	Parameter OUTPUT_NODES bound to: 84 - type: integer 
+	Parameter file bound to: D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightsdense_1_IEEE.txt - type: string 
+	Parameter TOTAL_WEIGHT_SIZE bound to: 10080 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightsdense_1_IEEE.txt' is read successfully [D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightMemory.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'weightMemory' (1#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightMemory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'weightMemory__parameterized0' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightMemory.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter INPUT_NODES bound to: 84 - type: integer 
+	Parameter OUTPUT_NODES bound to: 10 - type: integer 
+	Parameter file bound to: D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightsdense_2_IEEE.txt - type: string 
+	Parameter TOTAL_WEIGHT_SIZE bound to: 840 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightsdense_2_IEEE.txt' is read successfully [D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightMemory.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'weightMemory__parameterized0' (1#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightMemory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'layer' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter INPUT_NODES bound to: 120 - type: integer 
+	Parameter OUTPUT_NODES bound to: 84 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'processingElement' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/processingElement.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'floatMult' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/floatMult.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'floatMult' (2#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/floatMult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'floatAdd' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/floatAdd.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'floatAdd' (3#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/floatAdd.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'processingElement' (4#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/processingElement.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'layer' (5#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'layer__parameterized0' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter INPUT_NODES bound to: 84 - type: integer 
+	Parameter OUTPUT_NODES bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'layer__parameterized0' (5#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UsingTheTanh' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/UsingTheTanh.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter nofinputs bound to: 84 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HyperBolicTangent' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/HyperBolicTangent.v:2]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter taylor_iter bound to: 4 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element AbsFloat_reg was removed.  [D:/University/Semester6/Logic-2/Integration first part/Integration first part/HyperBolicTangent.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'HyperBolicTangent' (6#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/HyperBolicTangent.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'UsingTheTanh' (7#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/UsingTheTanh.v:1]
+INFO: [Synth 8-6157] synthesizing module 'softmax' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/softmax.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter inputNum bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'exponent' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/exponent.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter taylor_iter bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'exponent' (8#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/exponent.v:1]
+INFO: [Synth 8-6157] synthesizing module 'floatReciprocal' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/floatReciprocal.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter P1 bound to: 1077195957 - type: integer 
+	Parameter P2 bound to: -1074728719 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'floatReciprocal' (9#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/floatReciprocal.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'softmax' (10#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/softmax.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'integrationFC' (11#1) [D:/University/Semester6/Logic-2/Integration first part/Integration first part/InegrationFCpart.v:2]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1361.027 ; gain = 982.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1361.027 ; gain = 982.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1361.027 ; gain = 982.551
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [D:/University/Semester6/Logic-2/Integration first part/Integration first part/floatMult.v:21]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:01 ; elapsed = 00:02:01 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------+------------+----------+
+|      |RTL Partition                      |Replication |Instances |
++------+-----------------------------------+------------+----------+
+|1     |weightMemory__GB0                  |           1|     31682|
+|2     |rom_weightMemory                   |           1|     15841|
+|3     |rom__27_weightMemory               |           1|     15841|
+|4     |weightMemory__GB3                  |           1|     31682|
+|5     |weightMemory__GB4                  |           1|     31682|
+|6     |weightMemory__GB5                  |           1|     31682|
+|7     |weightMemory__GB6                  |           1|     31682|
+|8     |rom__51_weightMemory               |           1|     15841|
+|9     |weightMemory__GB8                  |           1|     31682|
+|10    |rom__48_weightMemory               |           1|     15841|
+|11    |rom__5_weightMemory                |           1|     15841|
+|12    |weightMemory__GB11                 |           1|     31682|
+|13    |rom__46_weightMemory               |           1|     15841|
+|14    |rom__9_weightMemory                |           1|     15841|
+|15    |rom__7_weightMemory                |           1|     15841|
+|16    |weightMemory__GB15                 |           1|     31682|
+|17    |rom__11_weightMemory               |           1|     15841|
+|18    |rom__45_weightMemory               |           1|     15841|
+|19    |weightMemory__GB18                 |           1|     31682|
+|20    |weightMemory__GB19                 |           1|     31682|
+|21    |rom__14_weightMemory               |           1|     15841|
+|22    |rom__42_weightMemory               |           1|     15841|
+|23    |weightMemory__GB22                 |           1|     31682|
+|24    |weightMemory__GB23                 |           1|     31682|
+|25    |weightMemory__GB24                 |           1|     31682|
+|26    |rom__18_weightMemory               |           1|     15841|
+|27    |rom__36_weightMemory               |           1|     15841|
+|28    |rom__38_weightMemory               |           1|     15841|
+|29    |weightMemory__GB28                 |           1|     31682|
+|30    |weightMemory__GB29                 |           1|     31682|
+|31    |weightMemory__GB30                 |           1|     31682|
+|32    |rom__32_weightMemory               |           1|     15841|
+|33    |rom__23_weightMemory               |           1|     15841|
+|34    |rom__21_weightMemory               |           1|     15841|
+|35    |weightMemory__GB34                 |           1|     31682|
+|36    |weightMemory__GB35                 |           1|     31682|
+|37    |weightMemory__GB36                 |           1|     31682|
+|38    |rom__29_weightMemory               |           1|     15841|
+|39    |weightMemory__GB38                 |           1|     34370|
+|40    |rom__75_weightMemory               |           1|     15841|
+|41    |rom__74_weightMemory               |           1|     15841|
+|42    |rom__73_weightMemory               |           1|     15841|
+|43    |rom__72_weightMemory               |           1|     15841|
+|44    |rom__71_weightMemory               |           1|     15841|
+|45    |rom__57_weightMemory               |           1|     15841|
+|46    |weightMemory__GB45                 |           1|     31682|
+|47    |weightMemory__GB46                 |           1|     31682|
+|48    |weightMemory__GB47                 |           1|     31682|
+|49    |weightMemory__GB48                 |           1|     31682|
+|50    |rom__64_weightMemory               |           1|     15841|
+|51    |weightMemory__GB50                 |           1|     31682|
+|52    |rom__58_weightMemory               |           1|     15841|
+|53    |rom__61_weightMemory               |           1|     15841|
+|54    |weightMemory__GB53                 |           1|     31770|
+|55    |weightMemory__GB54                 |           1|     31682|
+|56    |weightMemory__GB55                 |           1|     31682|
+|57    |processingElement                  |          94|     10941|
+|58    |layer__GCB0                        |           1|     32640|
+|59    |case__12_layer__GD                 |           1|      8160|
+|60    |layer__GCB2                        |           1|     16320|
+|61    |layer__GCB3                        |           1|     16320|
+|62    |layer__GCB4                        |           1|     24480|
+|63    |layer__GCB5                        |           1|     33490|
+|64    |layer__parameterized0__GCB0        |           1|     32640|
+|65    |case__29_layer__parameterized0__GD |           1|      8160|
+|66    |layer__parameterized0__GCB2        |           1|     16320|
+|67    |layer__parameterized0__GCB3        |           1|     16800|
+|68    |layer__parameterized0__GCB4        |           1|     24850|
+|69    |layer__parameterized0__GCB5        |           1|     32640|
+|70    |UsingTheTanh__GB0                  |           1|     34141|
+|71    |UsingTheTanh__GB1                  |           1|     13939|
+|72    |UsingTheTanh__GB2                  |           1|     24746|
+|73    |exponent                           |          10|     18298|
+|74    |floatReciprocal                    |           1|     32955|
+|75    |softmax__GCB1                      |           1|     17791|
+|76    |integrationFC__GC0                 |           1|     11054|
++------+-----------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register weights_reg [D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightMemory.v:20]
+INFO: [Synth 8-3538] Detected potentially large (wide) register Output_reg [D:/University/Semester6/Logic-2/Integration first part/Integration first part/UsingTheTanh.v:26]
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     25 Bit       Adders := 109   
+	   3 Input     25 Bit       Adders := 218   
+	   2 Input     24 Bit       Adders := 109   
+	   3 Input      8 Bit       Adders := 3001  
+	   2 Input      8 Bit       Adders := 2621  
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 230   
++---Registers : 
+	             2688 Bit    Registers := 2     
+	              320 Bit    Registers := 2     
+	              224 Bit    Registers := 10    
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 143   
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   2 Input   2688 Bit        Muxes := 4     
+	   2 Input    320 Bit        Muxes := 6     
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 454   
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 545   
+	   2 Input     23 Bit        Muxes := 327   
+	   2 Input      8 Bit        Muxes := 330   
+	   2 Input      1 Bit        Muxes := 226   
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register weights_reg [D:/University/Semester6/Logic-2/Integration first part/Integration first part/weightMemory.v:20]
+INFO: [Synth 8-3538] Detected potentially large (wide) register Output_reg [D:/University/Semester6/Logic-2/Integration first part/Integration first part/UsingTheTanh.v:26]
+Hierarchical RTL Component report 
+Module integrationFC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+Module weightMemory 
+Detailed RTL Component Info : 
++---Registers : 
+	             2688 Bit    Registers := 1     
+Module floatMult__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatAdd__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 24    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module processingElement 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module layer 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module layer__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatMult__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatMult__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatMult__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatAdd__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 24    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module HyperBolicTangent 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+Module UsingTheTanh 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	             2688 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   2688 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+Module floatMult__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatAdd__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 24    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module floatMult__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatAdd__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 24    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module floatMult__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatAdd__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 24    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module floatReciprocal 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module floatMult__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatMult__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module floatAdd__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 24    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module exponent 
+Detailed RTL Component Info : 
++---Registers : 
+	              224 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
+Module floatAdd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 24    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module floatMult 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module softmax 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	              320 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    320 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module weightMemory__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	              320 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'weights_reg[28]' (FDR) to 'weights_reg[29]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[60]' (FDR) to 'weights_reg[61]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[92]' (FDR) to 'weights_reg[93]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[124]' (FDR) to 'weights_reg[125]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[156]' (FDR) to 'weights_reg[157]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[188]' (FDR) to 'weights_reg[189]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[220]' (FDR) to 'weights_reg[221]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[252]' (FDR) to 'weights_reg[253]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[284]' (FDR) to 'weights_reg[285]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[316]' (FDR) to 'weights_reg[317]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[348]' (FDR) to 'weights_reg[349]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[380]' (FDR) to 'weights_reg[381]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[412]' (FDR) to 'weights_reg[413]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[444]' (FDR) to 'weights_reg[445]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[476]' (FDR) to 'weights_reg[477]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[508]' (FDR) to 'weights_reg[509]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[540]' (FDR) to 'weights_reg[541]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[572]' (FDR) to 'weights_reg[573]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[604]' (FDR) to 'weights_reg[605]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[636]' (FDR) to 'weights_reg[637]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[668]' (FDR) to 'weights_reg[669]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[700]' (FDR) to 'weights_reg[701]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[732]' (FDR) to 'weights_reg[733]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[764]' (FDR) to 'weights_reg[765]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[796]' (FDR) to 'weights_reg[797]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[828]' (FDR) to 'weights_reg[829]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[860]' (FDR) to 'weights_reg[861]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[892]' (FDR) to 'weights_reg[893]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[924]' (FDR) to 'weights_reg[925]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[956]' (FDR) to 'weights_reg[957]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[988]' (FDR) to 'weights_reg[989]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1020]' (FDR) to 'weights_reg[1021]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1052]' (FDR) to 'weights_reg[1053]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1084]' (FDR) to 'weights_reg[1085]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1116]' (FDR) to 'weights_reg[1117]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1148]' (FDR) to 'weights_reg[1149]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1180]' (FDR) to 'weights_reg[1181]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1212]' (FDR) to 'weights_reg[1213]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1244]' (FDR) to 'weights_reg[1245]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1276]' (FDR) to 'weights_reg[1277]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1308]' (FDR) to 'weights_reg[1309]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1340]' (FDR) to 'weights_reg[1341]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1372]' (FDR) to 'weights_reg[1373]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1404]' (FDR) to 'weights_reg[1405]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1436]' (FDR) to 'weights_reg[1437]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1468]' (FDR) to 'weights_reg[1469]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1500]' (FDR) to 'weights_reg[1501]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1532]' (FDR) to 'weights_reg[1533]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1564]' (FDR) to 'weights_reg[1565]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1596]' (FDR) to 'weights_reg[1597]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1628]' (FDR) to 'weights_reg[1629]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1660]' (FDR) to 'weights_reg[1661]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1692]' (FDR) to 'weights_reg[1693]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1724]' (FDR) to 'weights_reg[1725]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1756]' (FDR) to 'weights_reg[1757]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1788]' (FDR) to 'weights_reg[1789]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1820]' (FDR) to 'weights_reg[1821]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1852]' (FDR) to 'weights_reg[1853]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1884]' (FDR) to 'weights_reg[1885]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1916]' (FDR) to 'weights_reg[1917]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1948]' (FDR) to 'weights_reg[1949]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[1980]' (FDR) to 'weights_reg[1981]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2012]' (FDR) to 'weights_reg[2013]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2044]' (FDR) to 'weights_reg[2045]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2076]' (FDR) to 'weights_reg[2077]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2108]' (FDR) to 'weights_reg[2109]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2140]' (FDR) to 'weights_reg[2141]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2172]' (FDR) to 'weights_reg[2173]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2204]' (FDR) to 'weights_reg[2205]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2236]' (FDR) to 'weights_reg[2237]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2268]' (FDR) to 'weights_reg[2269]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2300]' (FDR) to 'weights_reg[2301]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2332]' (FDR) to 'weights_reg[2333]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2364]' (FDR) to 'weights_reg[2365]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2396]' (FDR) to 'weights_reg[2397]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2428]' (FDR) to 'weights_reg[2429]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2460]' (FDR) to 'weights_reg[2461]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2462] )
+INFO: [Synth 8-3886] merging instance 'weights_reg[2492]' (FDR) to 'weights_reg[2493]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2494] )
+INFO: [Synth 8-3886] merging instance 'weights_reg[2524]' (FDR) to 'weights_reg[2525]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2556]' (FDR) to 'weights_reg[2557]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2588]' (FDR) to 'weights_reg[2589]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2620]' (FDR) to 'weights_reg[2621]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2652]' (FDR) to 'weights_reg[2653]'
+INFO: [Synth 8-3886] merging instance 'weights_reg[2684]' (FDR) to 'weights_reg[2685]'
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+WARNING: [Synth 8-3917] design layer__GCB5 has port P[4] driven by constant 0
+WARNING: [Synth 8-3917] design layer__GCB5 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design layer__GCB5 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design layer__GCB5 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design layer__GCB5 has port P[0] driven by constant 0
+WARNING: [Synth 8-3917] design layer__parameterized0__GCB4 has port P[4] driven by constant 0
+WARNING: [Synth 8-3917] design layer__parameterized0__GCB4 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design layer__parameterized0__GCB4 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design layer__parameterized0__GCB4 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design layer__parameterized0__GCB4 has port P[0] driven by constant 0
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TanhArray/\ForXSqOrOne_reg[31] )
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[96]' (FDE) to 'TanhArray/Coefficients_reg[100]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[97]' (FDE) to 'TanhArray/Coefficients_reg[98]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[98]' (FDE) to 'TanhArray/Coefficients_reg[99]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[99]' (FDE) to 'TanhArray/Coefficients_reg[101]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[100]' (FDE) to 'TanhArray/Coefficients_reg[102]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[101]' (FDE) to 'TanhArray/Coefficients_reg[105]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[102]' (FDE) to 'TanhArray/Coefficients_reg[103]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[103]' (FDE) to 'TanhArray/Coefficients_reg[104]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[104]' (FDE) to 'TanhArray/Coefficients_reg[106]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[105]' (FDE) to 'TanhArray/Coefficients_reg[108]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[106]' (FDE) to 'TanhArray/Coefficients_reg[107]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[107]' (FDE) to 'TanhArray/Coefficients_reg[112]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[108]' (FDE) to 'TanhArray/Coefficients_reg[109]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[109]' (FDE) to 'TanhArray/Coefficients_reg[110]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[110]' (FDE) to 'TanhArray/Coefficients_reg[111]'
+INFO: [Synth 8-3886] merging instance 'TanhArray/Coefficients_reg[111]' (FDE) to 'TanhArray/Coefficients_reg[113]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TanhArray/\Coefficients_reg[126] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TanhArray/\Coefficients_reg[94] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TanhArray/\Coefficients_reg[62] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TanhArray/\Coefficients_reg[2] )
+INFO: [Synth 8-4471] merging register 'i_reg[7:0]' into 'i_reg[7:0]' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/UsingTheTanh.v:15]
+WARNING: [Synth 8-3917] design UsingTheTanh__GB2 has port P[13] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB2 has port P[4] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB2 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB2 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB2 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design UsingTheTanh__GB2 has port P[0] driven by constant 0
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\divisors_reg[223] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\divisors_reg[159] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\divisors_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\divisors_reg[4] )
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+INFO: [Synth 8-4471] merging register 'mulCounter_reg[3:0]' into 'mulCounter_reg[3:0]' [D:/University/Semester6/Logic-2/Integration first part/Integration first part/softmax.v:36]
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (W2/\weights_reg[318] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:16:57 ; elapsed = 00:19:31 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------+------------+---------------+----------------+
+|Module Name  | RTL Object | Depth x Width | Implemented As | 
++-------------+------------+---------------+----------------+
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 16384x31      | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
+|weightMemory | p_0_out    | 1024x30       | LUT            | 
++-------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|floatMult   | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------+------------+----------+
+|      |RTL Partition                      |Replication |Instances |
++------+-----------------------------------+------------+----------+
+|1     |weightMemory__GB0                  |           1|     17854|
+|2     |rom_weightMemory                   |           1|      8927|
+|3     |rom__27_weightMemory               |           1|      8927|
+|4     |weightMemory__GB3                  |           1|     17854|
+|5     |weightMemory__GB4                  |           1|     17854|
+|6     |weightMemory__GB5                  |           1|     17854|
+|7     |weightMemory__GB6                  |           1|     17854|
+|8     |rom__51_weightMemory               |           1|      8927|
+|9     |weightMemory__GB8                  |           1|     17854|
+|10    |rom__48_weightMemory               |           1|      8927|
+|11    |rom__5_weightMemory                |           1|      8927|
+|12    |weightMemory__GB11                 |           1|     17854|
+|13    |rom__46_weightMemory               |           1|      8927|
+|14    |rom__9_weightMemory                |           1|      8927|
+|15    |rom__7_weightMemory                |           1|      8927|
+|16    |weightMemory__GB15                 |           1|     17854|
+|17    |rom__11_weightMemory               |           1|      8927|
+|18    |rom__45_weightMemory               |           1|      8927|
+|19    |weightMemory__GB18                 |           1|     17854|
+|20    |weightMemory__GB19                 |           1|     17854|
+|21    |rom__14_weightMemory               |           1|      8927|
+|22    |rom__42_weightMemory               |           1|      8927|
+|23    |weightMemory__GB22                 |           1|     17854|
+|24    |weightMemory__GB23                 |           1|     17854|
+|25    |weightMemory__GB24                 |           1|     17854|
+|26    |rom__18_weightMemory               |           1|      8927|
+|27    |rom__36_weightMemory               |           1|      8927|
+|28    |rom__38_weightMemory               |           1|      8927|
+|29    |weightMemory__GB28                 |           1|     17854|
+|30    |weightMemory__GB29                 |           1|     17854|
+|31    |weightMemory__GB30                 |           1|     17854|
+|32    |rom__32_weightMemory               |           1|      8927|
+|33    |rom__23_weightMemory               |           1|      8927|
+|34    |rom__21_weightMemory               |           1|      8927|
+|35    |weightMemory__GB34                 |           1|     17854|
+|36    |weightMemory__GB35                 |           1|     17854|
+|37    |weightMemory__GB36                 |           1|     17854|
+|38    |rom__29_weightMemory               |           1|      8927|
+|39    |weightMemory__GB38                 |           1|     20456|
+|40    |rom__75_weightMemory               |           1|      8927|
+|41    |rom__74_weightMemory               |           1|      8927|
+|42    |rom__73_weightMemory               |           1|      8927|
+|43    |rom__72_weightMemory               |           1|      8927|
+|44    |rom__71_weightMemory               |           1|      8927|
+|45    |rom__57_weightMemory               |           1|      8927|
+|46    |weightMemory__GB45                 |           1|     17854|
+|47    |weightMemory__GB46                 |           1|     17854|
+|48    |weightMemory__GB47                 |           1|     17854|
+|49    |weightMemory__GB48                 |           1|     17854|
+|50    |rom__64_weightMemory               |           1|      8927|
+|51    |weightMemory__GB50                 |           1|     17854|
+|52    |rom__58_weightMemory               |           1|      8927|
+|53    |rom__61_weightMemory               |           1|      8927|
+|54    |weightMemory__GB53                 |           1|     18389|
+|55    |weightMemory__GB54                 |           1|     17854|
+|56    |weightMemory__GB55                 |           1|     17854|
+|57    |processingElement                  |          94|      4584|
+|58    |layer__GCB0                        |           1|      2012|
+|59    |case__12_layer__GD                 |           1|       503|
+|60    |layer__GCB2                        |           1|      1006|
+|61    |layer__GCB3                        |           1|      1006|
+|62    |layer__GCB4                        |           1|      1509|
+|63    |layer__GCB5                        |           1|      1511|
+|64    |layer__parameterized0__GCB0        |           1|      2012|
+|65    |case__29_layer__parameterized0__GD |           1|       503|
+|66    |layer__parameterized0__GCB2        |           1|      1006|
+|67    |layer__parameterized0__GCB3        |           1|      1486|
+|68    |layer__parameterized0__GCB4        |           1|       807|
+|69    |layer__parameterized0__GCB5        |           1|      2012|
+|70    |UsingTheTanh__GB0                  |           1|     16846|
+|71    |UsingTheTanh__GB1                  |           1|      6808|
+|72    |UsingTheTanh__GB2                  |           1|       179|
+|73    |exponent                           |          10|      6845|
+|74    |floatReciprocal                    |           1|     15388|
+|75    |softmax__GCB1                      |           1|      7311|
+|76    |integrationFC__GC0                 |           1|      8326|
++------+-----------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[94] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[126] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[158] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[190] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[222] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[286] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[318] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[350] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[382] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[414] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[446] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[478] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[510] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[542] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[574] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[606] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[638] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[670] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[702] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[734] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[766] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[798] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[830] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[862] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[894] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[926] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[958] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[990] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1022] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1054] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1086] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1118] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1150] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1182] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1214] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1246] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1278] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1310] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1342] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1374] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1406] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1438] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1470] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1502] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1534] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1566] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1598] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1630] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1662] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1694] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1726] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1758] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1790] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1822] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1854] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1886] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1918] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1950] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[1982] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2014] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2046] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2078] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2110] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2142] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2174] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2206] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2238] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2270] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2302] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2334] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2366] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2398] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2430] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2526] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2558] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2590] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2622] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2654] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\weights_reg[2686] )
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:17:15 ; elapsed = 00:19:50 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------+------------+----------+
+|      |RTL Partition                      |Replication |Instances |
++------+-----------------------------------+------------+----------+
+|1     |weightMemory__GB0                  |           1|     17854|
+|2     |rom_weightMemory                   |           1|      8927|
+|3     |rom__27_weightMemory               |           1|      8927|
+|4     |weightMemory__GB3                  |           1|     17854|
+|5     |weightMemory__GB4                  |           1|     17854|
+|6     |weightMemory__GB5                  |           1|     17854|
+|7     |weightMemory__GB6                  |           1|     17854|
+|8     |rom__51_weightMemory               |           1|      8927|
+|9     |weightMemory__GB8                  |           1|     17854|
+|10    |rom__48_weightMemory               |           1|      8927|
+|11    |rom__5_weightMemory                |           1|      8927|
+|12    |weightMemory__GB11                 |           1|     17854|
+|13    |rom__46_weightMemory               |           1|      8927|
+|14    |rom__9_weightMemory                |           1|      8927|
+|15    |rom__7_weightMemory                |           1|      8927|
+|16    |weightMemory__GB15                 |           1|     17854|
+|17    |rom__11_weightMemory               |           1|      8927|
+|18    |rom__45_weightMemory               |           1|      8927|
+|19    |weightMemory__GB18                 |           1|     17854|
+|20    |weightMemory__GB19                 |           1|     17854|
+|21    |rom__14_weightMemory               |           1|      8927|
+|22    |rom__42_weightMemory               |           1|      8927|
+|23    |weightMemory__GB22                 |           1|     17854|
+|24    |weightMemory__GB23                 |           1|     17854|
+|25    |weightMemory__GB24                 |           1|     17854|
+|26    |rom__18_weightMemory               |           1|      8927|
+|27    |rom__36_weightMemory               |           1|      8927|
+|28    |rom__38_weightMemory               |           1|      8927|
+|29    |weightMemory__GB28                 |           1|     17854|
+|30    |weightMemory__GB29                 |           1|     17854|
+|31    |weightMemory__GB30                 |           1|     17854|
+|32    |rom__32_weightMemory               |           1|      8927|
+|33    |rom__23_weightMemory               |           1|      8927|
+|34    |rom__21_weightMemory               |           1|      8927|
+|35    |weightMemory__GB34                 |           1|     17854|
+|36    |weightMemory__GB35                 |           1|     17854|
+|37    |weightMemory__GB36                 |           1|     17854|
+|38    |rom__29_weightMemory               |           1|      8927|
+|39    |weightMemory__GB38                 |           1|     20374|
+|40    |rom__75_weightMemory               |           1|      8927|
+|41    |rom__74_weightMemory               |           1|      8927|
+|42    |rom__73_weightMemory               |           1|      8927|
+|43    |rom__72_weightMemory               |           1|      8927|
+|44    |rom__71_weightMemory               |           1|      8927|
+|45    |rom__57_weightMemory               |           1|      8927|
+|46    |weightMemory__GB45                 |           1|     17854|
+|47    |weightMemory__GB46                 |           1|     17854|
+|48    |weightMemory__GB47                 |           1|     17854|
+|49    |weightMemory__GB48                 |           1|     17854|
+|50    |rom__64_weightMemory               |           1|      8927|
+|51    |weightMemory__GB50                 |           1|     17854|
+|52    |rom__58_weightMemory               |           1|      8927|
+|53    |rom__61_weightMemory               |           1|      8927|
+|54    |weightMemory__GB53                 |           1|     18389|
+|55    |weightMemory__GB54                 |           1|     17854|
+|56    |weightMemory__GB55                 |           1|     17854|
+|57    |processingElement                  |          82|      4581|
+|58    |layer__GCB0                        |           1|       896|
+|59    |case__12_layer__GD                 |           1|       224|
+|60    |layer__GCB2                        |           1|       448|
+|61    |layer__GCB3                        |           1|       448|
+|62    |layer__GCB4                        |           1|       672|
+|63    |layer__GCB5                        |           1|      1512|
+|64    |layer__parameterized0__GCB0        |           1|       896|
+|65    |case__29_layer__parameterized0__GD |           1|       224|
+|66    |layer__parameterized0__GCB2        |           1|       448|
+|67    |layer__parameterized0__GCB3        |           1|       928|
+|68    |layer__parameterized0__GCB4        |           1|       808|
+|69    |layer__parameterized0__GCB5        |           1|       896|
+|70    |UsingTheTanh__GB0                  |           1|     16846|
+|71    |UsingTheTanh__GB1                  |           1|      5685|
+|72    |UsingTheTanh__GB2                  |           1|       179|
+|73    |exponent                           |           1|      6845|
+|74    |floatReciprocal                    |           1|     15388|
+|75    |softmax__GCB1                      |           1|      7311|
+|76    |integrationFC__GC0                 |           1|      8326|
+|77    |processingElement__1               |           2|      4581|
+|78    |processingElement__2               |          10|      4581|
+|79    |exponent__1                        |           9|      6844|
++------+-----------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:18:32 ; elapsed = 00:21:12 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------+------------+----------+
+|      |RTL Partition                      |Replication |Instances |
++------+-----------------------------------+------------+----------+
+|1     |weightMemory__GB0                  |           1|     15179|
+|2     |rom_weightMemory                   |           1|      7601|
+|3     |rom__27_weightMemory               |           1|      7578|
+|4     |weightMemory__GB3                  |           1|     15159|
+|5     |weightMemory__GB4                  |           1|     15159|
+|6     |weightMemory__GB5                  |           1|     15179|
+|7     |weightMemory__GB6                  |           1|     15186|
+|8     |rom__51_weightMemory               |           1|      7578|
+|9     |weightMemory__GB8                  |           1|     15159|
+|10    |rom__48_weightMemory               |           1|      7601|
+|11    |rom__5_weightMemory                |           1|      7574|
+|12    |weightMemory__GB11                 |           1|     15179|
+|13    |rom__46_weightMemory               |           1|      7585|
+|14    |rom__9_weightMemory                |           1|      7574|
+|15    |rom__7_weightMemory                |           1|      7578|
+|16    |weightMemory__GB15                 |           1|     15186|
+|17    |rom__11_weightMemory               |           1|      7578|
+|18    |rom__45_weightMemory               |           1|      7574|
+|19    |weightMemory__GB18                 |           1|     15179|
+|20    |weightMemory__GB19                 |           1|     15148|
+|21    |rom__14_weightMemory               |           1|      7585|
+|22    |rom__42_weightMemory               |           1|      7585|
+|23    |weightMemory__GB22                 |           1|     15179|
+|24    |weightMemory__GB23                 |           1|     15179|
+|25    |weightMemory__GB24                 |           1|     15148|
+|26    |rom__18_weightMemory               |           1|      7585|
+|27    |rom__36_weightMemory               |           1|      7601|
+|28    |rom__38_weightMemory               |           1|      7585|
+|29    |weightMemory__GB28                 |           1|     15156|
+|30    |weightMemory__GB29                 |           1|     15186|
+|31    |weightMemory__GB30                 |           1|     15159|
+|32    |rom__32_weightMemory               |           1|      7601|
+|33    |rom__23_weightMemory               |           1|      7578|
+|34    |rom__21_weightMemory               |           1|      7574|
+|35    |weightMemory__GB34                 |           1|     15179|
+|36    |weightMemory__GB35                 |           1|     15159|
+|37    |weightMemory__GB36                 |           1|     15186|
+|38    |rom__29_weightMemory               |           1|      7574|
+|39    |weightMemory__GB38                 |           1|     17691|
+|40    |rom__75_weightMemory               |           1|      7578|
+|41    |rom__74_weightMemory               |           1|      7585|
+|42    |rom__73_weightMemory               |           1|      7574|
+|43    |rom__72_weightMemory               |           1|      7601|
+|44    |rom__71_weightMemory               |           1|      7578|
+|45    |rom__57_weightMemory               |           1|      7574|
+|46    |weightMemory__GB45                 |           1|     15156|
+|47    |weightMemory__GB46                 |           1|     15179|
+|48    |weightMemory__GB47                 |           1|     15156|
+|49    |weightMemory__GB48                 |           1|     15159|
+|50    |rom__64_weightMemory               |           1|      7601|
+|51    |weightMemory__GB50                 |           1|     15179|
+|52    |rom__58_weightMemory               |           1|      7585|
+|53    |rom__61_weightMemory               |           1|      7574|
+|54    |weightMemory__GB53                 |           1|     16251|
+|55    |weightMemory__GB54                 |           1|     15172|
+|56    |weightMemory__GB55                 |           1|     15159|
+|57    |processingElement                  |           1|      1393|
+|58    |layer__GCB0                        |           1|       384|
+|59    |case__12_layer__GD                 |           1|        96|
+|60    |layer__GCB2                        |           1|       192|
+|61    |layer__GCB3                        |           1|       192|
+|62    |layer__GCB4                        |           1|       288|
+|63    |layer__GCB5                        |           1|       581|
+|64    |layer__parameterized0__GCB0        |           1|       384|
+|65    |case__29_layer__parameterized0__GD |           1|        96|
+|66    |layer__parameterized0__GCB2        |           1|       192|
+|67    |layer__parameterized0__GCB3        |           1|       416|
+|68    |layer__parameterized0__GCB4        |           1|       325|
+|69    |UsingTheTanh__GB0                  |           1|      3890|
+|70    |UsingTheTanh__GB1                  |           1|      3121|
+|71    |UsingTheTanh__GB2                  |           1|       117|
+|72    |exponent                           |           1|      2248|
+|73    |floatReciprocal                    |           1|      3479|
+|74    |softmax__GCB1                      |           1|      2238|
+|75    |integrationFC__GC0                 |           1|      7016|
+|76    |processingElement__1               |           1|      1393|
+|77    |processingElement__2               |           1|      1394|
+|78    |exponent__1                        |           1|      2247|
+|79    |processingElement__3               |           1|      1393|
+|80    |processingElement__4               |           1|      1393|
+|81    |processingElement__5               |           1|      1393|
+|82    |processingElement__6               |           1|      1393|
+|83    |processingElement__7               |           1|      1393|
+|84    |processingElement__8               |           1|      1393|
+|85    |processingElement__9               |           1|      1393|
+|86    |processingElement__10              |           1|      1393|
+|87    |processingElement__11              |           1|      1393|
+|88    |processingElement__12              |           1|      1393|
+|89    |processingElement__13              |           1|      1393|
+|90    |processingElement__14              |           1|      1393|
+|91    |processingElement__15              |           1|      1393|
+|92    |processingElement__16              |           1|      1393|
+|93    |processingElement__17              |           1|      1393|
+|94    |processingElement__18              |           1|      1393|
+|95    |processingElement__19              |           1|      1393|
+|96    |processingElement__20              |           1|      1393|
+|97    |processingElement__21              |           1|      1393|
+|98    |processingElement__22              |           1|      1393|
+|99    |processingElement__23              |           1|      1393|
+|100   |processingElement__24              |           1|      1393|
+|101   |processingElement__25              |           1|      1393|
+|102   |processingElement__26              |           1|      1393|
+|103   |processingElement__27              |           1|      1393|
+|104   |processingElement__28              |           1|      1393|
+|105   |processingElement__29              |           1|      1393|
+|106   |processingElement__30              |           1|      1393|
+|107   |processingElement__31              |           1|      1393|
+|108   |processingElement__32              |           1|      1393|
+|109   |processingElement__33              |           1|      1393|
+|110   |processingElement__34              |           1|      1393|
+|111   |processingElement__35              |           1|      1393|
+|112   |processingElement__36              |           1|      1393|
+|113   |processingElement__37              |           1|      1393|
+|114   |processingElement__38              |           1|      1393|
+|115   |processingElement__39              |           1|      1393|
+|116   |processingElement__40              |           1|      1393|
+|117   |processingElement__41              |           1|      1393|
+|118   |processingElement__42              |           1|      1393|
+|119   |processingElement__43              |           1|      1393|
+|120   |processingElement__44              |           1|      1393|
+|121   |processingElement__45              |           1|      1393|
+|122   |processingElement__46              |           1|      1393|
+|123   |processingElement__47              |           1|      1393|
+|124   |processingElement__48              |           1|      1393|
+|125   |processingElement__49              |           1|      1393|
+|126   |processingElement__50              |           1|      1393|
+|127   |processingElement__51              |           1|      1393|
+|128   |processingElement__52              |           1|      1393|
+|129   |processingElement__53              |           1|      1393|
+|130   |processingElement__54              |           1|      1393|
+|131   |processingElement__55              |           1|      1393|
+|132   |processingElement__56              |           1|      1393|
+|133   |processingElement__57              |           1|      1393|
+|134   |processingElement__58              |           1|      1393|
+|135   |processingElement__59              |           1|      1393|
+|136   |processingElement__60              |           1|      1393|
+|137   |processingElement__61              |           1|      1393|
+|138   |processingElement__62              |           1|      1393|
+|139   |processingElement__63              |           1|      1393|
+|140   |processingElement__64              |           1|      1393|
+|141   |processingElement__65              |           1|      1393|
+|142   |processingElement__66              |           1|      1393|
+|143   |processingElement__67              |           1|      1393|
+|144   |processingElement__68              |           1|      1393|
+|145   |processingElement__69              |           1|      1393|
+|146   |processingElement__70              |           1|      1393|
+|147   |processingElement__71              |           1|      1393|
+|148   |processingElement__72              |           1|      1393|
+|149   |processingElement__73              |           1|      1393|
+|150   |processingElement__74              |           1|      1393|
+|151   |processingElement__75              |           1|      1393|
+|152   |processingElement__76              |           1|      1393|
+|153   |processingElement__77              |           1|      1393|
+|154   |processingElement__78              |           1|      1393|
+|155   |processingElement__79              |           1|      1393|
+|156   |processingElement__80              |           1|      1393|
+|157   |processingElement__81              |           1|      1393|
+|158   |processingElement__82              |           1|      1393|
+|159   |processingElement__83              |           1|      1393|
+|160   |processingElement__84              |           1|      1393|
+|161   |processingElement__85              |           1|      1394|
+|162   |processingElement__86              |           1|      1394|
+|163   |processingElement__87              |           1|      1394|
+|164   |processingElement__88              |           1|      1394|
+|165   |processingElement__89              |           1|      1394|
+|166   |processingElement__90              |           1|      1394|
+|167   |processingElement__91              |           1|      1394|
+|168   |processingElement__92              |           1|      1394|
+|169   |processingElement__93              |           1|      1394|
+|170   |exponent__2                        |           1|      2247|
+|171   |exponent__3                        |           1|      2247|
+|172   |exponent__4                        |           1|      2247|
+|173   |exponent__5                        |           1|      2247|
+|174   |exponent__6                        |           1|      2247|
+|175   |exponent__7                        |           1|      2247|
+|176   |exponent__8                        |           1|      2247|
+|177   |exponent__9                        |           1|      2247|
++------+-----------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/University/Semester6/Logic-2/Integration first part/Integration first part/layer.v:23]
+INFO: [Common 17-14] Message 'Synth 8-5844' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:20:51 ; elapsed = 00:23:45 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:20:57 ; elapsed = 00:23:51 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:21:21 ; elapsed = 00:24:15 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:21:25 ; elapsed = 00:24:19 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:21:37 ; elapsed = 00:24:31 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:21:40 ; elapsed = 00:24:34 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+-------+
+|      |Cell            |Count  |
++------+----------------+-------+
+|1     |BUFG            |      1|
+|2     |CARRY8          |   2173|
+|3     |DSP48E2         |    231|
+|4     |DSP_ALU         |     11|
+|5     |DSP_A_B_DATA    |     11|
+|6     |DSP_C_DATA      |     11|
+|7     |DSP_MULTIPLIER  |     11|
+|8     |DSP_M_DATA      |     11|
+|9     |DSP_OUTPUT      |     11|
+|10    |DSP_PREADD      |     11|
+|11    |DSP_PREADD_DATA |     11|
+|12    |LUT1            |   3063|
+|13    |LUT2            |  16789|
+|14    |LUT3            |  21805|
+|15    |LUT4            | 369990|
+|16    |LUT5            |  30917|
+|17    |LUT6            | 133361|
+|18    |MUXF7           | 207037|
+|19    |MUXF8           |  19927|
+|20    |FDCE            |   3203|
+|21    |FDPE            |     96|
+|22    |FDRE            |   7251|
+|23    |FDSE            |    250|
+|24    |IBUF            |   3842|
+|25    |OBUF            |    320|
++------+----------------+-------+
+
+Report Instance Areas: 
++------+--------------------------+----------------------------------------------------+-------+
+|      |Instance                  |Module                                              |Cells  |
++------+--------------------------+----------------------------------------------------+-------+
+|1     |top                       |                                                    | 820344|
+|2     |  FC1                     |layer                                               | 112183|
+|3     |    \genblk1[0].PE        |processingElement_74                                |   1306|
+|4     |      FADD                |floatAdd_324                                        |     16|
+|5     |      FM                  |floatMult_325                                       |    971|
+|6     |    \genblk1[10].PE       |processingElement_75                                |   1297|
+|7     |      FADD                |floatAdd_322                                        |     16|
+|8     |      FM                  |floatMult_323                                       |    971|
+|9     |    \genblk1[11].PE       |processingElement_76                                |   1363|
+|10    |      FADD                |floatAdd_320                                        |     16|
+|11    |      FM                  |floatMult_321                                       |    971|
+|12    |    \genblk1[12].PE       |processingElement_77                                |   1298|
+|13    |      FADD                |floatAdd_318                                        |     16|
+|14    |      FM                  |floatMult_319                                       |    971|
+|15    |    \genblk1[13].PE       |processingElement_78                                |   1305|
+|16    |      FADD                |floatAdd_316                                        |     16|
+|17    |      FM                  |floatMult_317                                       |    971|
+|18    |    \genblk1[14].PE       |processingElement_79                                |   1297|
+|19    |      FADD                |floatAdd_314                                        |     16|
+|20    |      FM                  |floatMult_315                                       |    971|
+|21    |    \genblk1[15].PE       |processingElement_80                                |   1331|
+|22    |      FADD                |floatAdd_312                                        |     16|
+|23    |      FM                  |floatMult_313                                       |    971|
+|24    |    \genblk1[16].PE       |processingElement_81                                |   1298|
+|25    |      FADD                |floatAdd_310                                        |     16|
+|26    |      FM                  |floatMult_311                                       |    971|
+|27    |    \genblk1[17].PE       |processingElement_82                                |   1305|
+|28    |      FADD                |floatAdd_308                                        |     16|
+|29    |      FM                  |floatMult_309                                       |    971|
+|30    |    \genblk1[18].PE       |processingElement_83                                |   1297|
+|31    |      FADD                |floatAdd_306                                        |     16|
+|32    |      FM                  |floatMult_307                                       |    971|
+|33    |    \genblk1[19].PE       |processingElement_84                                |   1395|
+|34    |      FADD                |floatAdd_304                                        |     16|
+|35    |      FM                  |floatMult_305                                       |    971|
+|36    |    \genblk1[1].PE        |processingElement_85                                |   1305|
+|37    |      FADD                |floatAdd_302                                        |     16|
+|38    |      FM                  |floatMult_303                                       |    971|
+|39    |    \genblk1[20].PE       |processingElement_86                                |   1298|
+|40    |      FADD                |floatAdd_300                                        |     16|
+|41    |      FM                  |floatMult_301                                       |    971|
+|42    |    \genblk1[21].PE       |processingElement_87                                |   1305|
+|43    |      FADD                |floatAdd_298                                        |     16|
+|44    |      FM                  |floatMult_299                                       |    971|
+|45    |    \genblk1[22].PE       |processingElement_88                                |   1297|
+|46    |      FADD                |floatAdd_296                                        |     16|
+|47    |      FM                  |floatMult_297                                       |    971|
+|48    |    \genblk1[23].PE       |processingElement_89                                |   1331|
+|49    |      FADD                |floatAdd_294                                        |     16|
+|50    |      FM                  |floatMult_295                                       |    971|
+|51    |    \genblk1[24].PE       |processingElement_90                                |   1298|
+|52    |      FADD                |floatAdd_292                                        |     16|
+|53    |      FM                  |floatMult_293                                       |    971|
+|54    |    \genblk1[25].PE       |processingElement_91                                |   1305|
+|55    |      FADD                |floatAdd_290                                        |     16|
+|56    |      FM                  |floatMult_291                                       |    971|
+|57    |    \genblk1[26].PE       |processingElement_92                                |   1297|
+|58    |      FADD                |floatAdd_288                                        |     16|
+|59    |      FM                  |floatMult_289                                       |    971|
+|60    |    \genblk1[27].PE       |processingElement_93                                |   1363|
+|61    |      FADD                |floatAdd_286                                        |     16|
+|62    |      FM                  |floatMult_287                                       |    971|
+|63    |    \genblk1[28].PE       |processingElement_94                                |   1298|
+|64    |      FADD                |floatAdd_284                                        |     16|
+|65    |      FM                  |floatMult_285                                       |    971|
+|66    |    \genblk1[29].PE       |processingElement_95                                |   1305|
+|67    |      FADD                |floatAdd_282                                        |     16|
+|68    |      FM                  |floatMult_283                                       |    971|
+|69    |    \genblk1[2].PE        |processingElement_96                                |   1297|
+|70    |      FADD                |floatAdd_280                                        |     16|
+|71    |      FM                  |floatMult_281                                       |    971|
+|72    |    \genblk1[30].PE       |processingElement_97                                |   1297|
+|73    |      FADD                |floatAdd_278                                        |     16|
+|74    |      FM                  |floatMult_279                                       |    971|
+|75    |    \genblk1[31].PE       |processingElement_98                                |   1331|
+|76    |      FADD                |floatAdd_276                                        |     16|
+|77    |      FM                  |floatMult_277                                       |    971|
+|78    |    \genblk1[32].PE       |processingElement_99                                |   1298|
+|79    |      FADD                |floatAdd_274                                        |     16|
+|80    |      FM                  |floatMult_275                                       |    971|
+|81    |    \genblk1[33].PE       |processingElement_100                               |   1305|
+|82    |      FADD                |floatAdd_272                                        |     16|
+|83    |      FM                  |floatMult_273                                       |    971|
+|84    |    \genblk1[34].PE       |processingElement_101                               |   1297|
+|85    |      FADD                |floatAdd_270                                        |     16|
+|86    |      FM                  |floatMult_271                                       |    971|
+|87    |    \genblk1[35].PE       |processingElement_102                               |   1395|
+|88    |      FADD                |floatAdd_268                                        |     16|
+|89    |      FM                  |floatMult_269                                       |    971|
+|90    |    \genblk1[36].PE       |processingElement_103                               |   1298|
+|91    |      FADD                |floatAdd_266                                        |     16|
+|92    |      FM                  |floatMult_267                                       |    971|
+|93    |    \genblk1[37].PE       |processingElement_104                               |   1305|
+|94    |      FADD                |floatAdd_264                                        |     16|
+|95    |      FM                  |floatMult_265                                       |    971|
+|96    |    \genblk1[38].PE       |processingElement_105                               |   1297|
+|97    |      FADD                |floatAdd_262                                        |     16|
+|98    |      FM                  |floatMult_263                                       |    971|
+|99    |    \genblk1[39].PE       |processingElement_106                               |   1331|
+|100   |      FADD                |floatAdd_260                                        |     16|
+|101   |      FM                  |floatMult_261                                       |    971|
+|102   |    \genblk1[3].PE        |processingElement_107                               |   1395|
+|103   |      FADD                |floatAdd_258                                        |     16|
+|104   |      FM                  |floatMult_259                                       |    971|
+|105   |    \genblk1[40].PE       |processingElement_108                               |   1298|
+|106   |      FADD                |floatAdd_256                                        |     16|
+|107   |      FM                  |floatMult_257                                       |    971|
+|108   |    \genblk1[41].PE       |processingElement_109                               |   1305|
+|109   |      FADD                |floatAdd_254                                        |     16|
+|110   |      FM                  |floatMult_255                                       |    971|
+|111   |    \genblk1[42].PE       |processingElement_110                               |   1297|
+|112   |      FADD                |floatAdd_252                                        |     16|
+|113   |      FM                  |floatMult_253                                       |    971|
+|114   |    \genblk1[43].PE       |processingElement_111                               |   1363|
+|115   |      FADD                |floatAdd_250                                        |     16|
+|116   |      FM                  |floatMult_251                                       |    971|
+|117   |    \genblk1[44].PE       |processingElement_112                               |   1298|
+|118   |      FADD                |floatAdd_248                                        |     16|
+|119   |      FM                  |floatMult_249                                       |    971|
+|120   |    \genblk1[45].PE       |processingElement_113                               |   1305|
+|121   |      FADD                |floatAdd_246                                        |     16|
+|122   |      FM                  |floatMult_247                                       |    971|
+|123   |    \genblk1[46].PE       |processingElement_114                               |   1297|
+|124   |      FADD                |floatAdd_244                                        |     16|
+|125   |      FM                  |floatMult_245                                       |    971|
+|126   |    \genblk1[47].PE       |processingElement_115                               |   1331|
+|127   |      FADD                |floatAdd_242                                        |     16|
+|128   |      FM                  |floatMult_243                                       |    971|
+|129   |    \genblk1[48].PE       |processingElement_116                               |   1298|
+|130   |      FADD                |floatAdd_240                                        |     16|
+|131   |      FM                  |floatMult_241                                       |    971|
+|132   |    \genblk1[49].PE       |processingElement_117                               |   1305|
+|133   |      FADD                |floatAdd_238                                        |     16|
+|134   |      FM                  |floatMult_239                                       |    971|
+|135   |    \genblk1[4].PE        |processingElement_118                               |   1298|
+|136   |      FADD                |floatAdd_236                                        |     16|
+|137   |      FM                  |floatMult_237                                       |    971|
+|138   |    \genblk1[50].PE       |processingElement_119                               |   1297|
+|139   |      FADD                |floatAdd_234                                        |     16|
+|140   |      FM                  |floatMult_235                                       |    971|
+|141   |    \genblk1[51].PE       |processingElement_120                               |   1427|
+|142   |      FADD                |floatAdd_232                                        |     16|
+|143   |      FM                  |floatMult_233                                       |    971|
+|144   |    \genblk1[52].PE       |processingElement_121                               |   1298|
+|145   |      FADD                |floatAdd_230                                        |     16|
+|146   |      FM                  |floatMult_231                                       |    971|
+|147   |    \genblk1[53].PE       |processingElement_122                               |   1305|
+|148   |      FADD                |floatAdd_228                                        |     16|
+|149   |      FM                  |floatMult_229                                       |    971|
+|150   |    \genblk1[54].PE       |processingElement_123                               |   1297|
+|151   |      FADD                |floatAdd_226                                        |     16|
+|152   |      FM                  |floatMult_227                                       |    971|
+|153   |    \genblk1[55].PE       |processingElement_124                               |   1331|
+|154   |      FADD                |floatAdd_224                                        |     16|
+|155   |      FM                  |floatMult_225                                       |    971|
+|156   |    \genblk1[56].PE       |processingElement_125                               |   1298|
+|157   |      FADD                |floatAdd_222                                        |     16|
+|158   |      FM                  |floatMult_223                                       |    971|
+|159   |    \genblk1[57].PE       |processingElement_126                               |   1305|
+|160   |      FADD                |floatAdd_220                                        |     16|
+|161   |      FM                  |floatMult_221                                       |    971|
+|162   |    \genblk1[58].PE       |processingElement_127                               |   1297|
+|163   |      FADD                |floatAdd_218                                        |     16|
+|164   |      FM                  |floatMult_219                                       |    971|
+|165   |    \genblk1[59].PE       |processingElement_128                               |   1363|
+|166   |      FADD                |floatAdd_216                                        |     16|
+|167   |      FM                  |floatMult_217                                       |    971|
+|168   |    \genblk1[5].PE        |processingElement_129                               |   1305|
+|169   |      FADD                |floatAdd_214                                        |     16|
+|170   |      FM                  |floatMult_215                                       |    971|
+|171   |    \genblk1[60].PE       |processingElement_130                               |   1298|
+|172   |      FADD                |floatAdd_212                                        |     16|
+|173   |      FM                  |floatMult_213                                       |    971|
+|174   |    \genblk1[61].PE       |processingElement_131                               |   1305|
+|175   |      FADD                |floatAdd_210                                        |     16|
+|176   |      FM                  |floatMult_211                                       |    971|
+|177   |    \genblk1[62].PE       |processingElement_132                               |   1297|
+|178   |      FADD                |floatAdd_208                                        |     16|
+|179   |      FM                  |floatMult_209                                       |    971|
+|180   |    \genblk1[63].PE       |processingElement_133                               |   1331|
+|181   |      FADD                |floatAdd_206                                        |     16|
+|182   |      FM                  |floatMult_207                                       |    971|
+|183   |    \genblk1[64].PE       |processingElement_134                               |   1298|
+|184   |      FADD                |floatAdd_204                                        |     16|
+|185   |      FM                  |floatMult_205                                       |    971|
+|186   |    \genblk1[65].PE       |processingElement_135                               |   1305|
+|187   |      FADD                |floatAdd_202                                        |     16|
+|188   |      FM                  |floatMult_203                                       |    971|
+|189   |    \genblk1[66].PE       |processingElement_136                               |   1297|
+|190   |      FADD                |floatAdd_200                                        |     16|
+|191   |      FM                  |floatMult_201                                       |    971|
+|192   |    \genblk1[67].PE       |processingElement_137                               |   1395|
+|193   |      FADD                |floatAdd_198                                        |     16|
+|194   |      FM                  |floatMult_199                                       |    971|
+|195   |    \genblk1[68].PE       |processingElement_138                               |   1298|
+|196   |      FADD                |floatAdd_196                                        |     16|
+|197   |      FM                  |floatMult_197                                       |    971|
+|198   |    \genblk1[69].PE       |processingElement_139                               |   1305|
+|199   |      FADD                |floatAdd_194                                        |     16|
+|200   |      FM                  |floatMult_195                                       |    971|
+|201   |    \genblk1[6].PE        |processingElement_140                               |   1297|
+|202   |      FADD                |floatAdd_192                                        |     16|
+|203   |      FM                  |floatMult_193                                       |    971|
+|204   |    \genblk1[70].PE       |processingElement_141                               |   1297|
+|205   |      FADD                |floatAdd_190                                        |     16|
+|206   |      FM                  |floatMult_191                                       |    971|
+|207   |    \genblk1[71].PE       |processingElement_142                               |   1331|
+|208   |      FADD                |floatAdd_188                                        |     16|
+|209   |      FM                  |floatMult_189                                       |    971|
+|210   |    \genblk1[72].PE       |processingElement_143                               |   1298|
+|211   |      FADD                |floatAdd_186                                        |     16|
+|212   |      FM                  |floatMult_187                                       |    971|
+|213   |    \genblk1[73].PE       |processingElement_144                               |   1305|
+|214   |      FADD                |floatAdd_184                                        |     16|
+|215   |      FM                  |floatMult_185                                       |    971|
+|216   |    \genblk1[74].PE       |processingElement_145                               |   1297|
+|217   |      FADD                |floatAdd_182                                        |     16|
+|218   |      FM                  |floatMult_183                                       |    971|
+|219   |    \genblk1[75].PE       |processingElement_146                               |   1363|
+|220   |      FADD                |floatAdd_180                                        |     16|
+|221   |      FM                  |floatMult_181                                       |    971|
+|222   |    \genblk1[76].PE       |processingElement_147                               |   1298|
+|223   |      FADD                |floatAdd_178                                        |     16|
+|224   |      FM                  |floatMult_179                                       |    971|
+|225   |    \genblk1[77].PE       |processingElement_148                               |   1305|
+|226   |      FADD                |floatAdd_176                                        |     16|
+|227   |      FM                  |floatMult_177                                       |    971|
+|228   |    \genblk1[78].PE       |processingElement_149                               |   1297|
+|229   |      FADD                |floatAdd_174                                        |     16|
+|230   |      FM                  |floatMult_175                                       |    971|
+|231   |    \genblk1[79].PE       |processingElement_150                               |   1331|
+|232   |      FADD                |floatAdd_172                                        |     16|
+|233   |      FM                  |floatMult_173                                       |    971|
+|234   |    \genblk1[7].PE        |processingElement_151                               |   1331|
+|235   |      FADD                |floatAdd_170                                        |     16|
+|236   |      FM                  |floatMult_171                                       |    971|
+|237   |    \genblk1[80].PE       |processingElement_152                               |   1300|
+|238   |      FADD                |floatAdd_168                                        |     16|
+|239   |      FM                  |floatMult_169                                       |    971|
+|240   |    \genblk1[81].PE       |processingElement_153                               |   1300|
+|241   |      FADD                |floatAdd_166                                        |     16|
+|242   |      FM                  |floatMult_167                                       |    971|
+|243   |    \genblk1[82].PE       |processingElement_154                               |   1303|
+|244   |      FADD                |floatAdd_164                                        |     16|
+|245   |      FM                  |floatMult_165                                       |    971|
+|246   |    \genblk1[83].PE       |processingElement_155                               |   1331|
+|247   |      FADD                |floatAdd_162                                        |     16|
+|248   |      FM                  |floatMult_163                                       |    971|
+|249   |    \genblk1[8].PE        |processingElement_156                               |   1298|
+|250   |      FADD                |floatAdd_160                                        |     16|
+|251   |      FM                  |floatMult_161                                       |    971|
+|252   |    \genblk1[9].PE        |processingElement_157                               |   1305|
+|253   |      FADD                |floatAdd_158                                        |     16|
+|254   |      FM                  |floatMult_159                                       |    971|
+|255   |  FC2                     |layer__parameterized0                               |  13303|
+|256   |    \genblk1[0].PE        |processingElement                                   |   1326|
+|257   |      FADD                |floatAdd_72                                         |     16|
+|258   |      FM                  |floatMult_73                                        |    977|
+|259   |    \genblk1[1].PE        |processingElement_45                                |   1312|
+|260   |      FADD                |floatAdd_70                                         |     16|
+|261   |      FM                  |floatMult_71                                        |    977|
+|262   |    \genblk1[2].PE        |processingElement_46                                |   1318|
+|263   |      FADD                |floatAdd_68                                         |     16|
+|264   |      FM                  |floatMult_69                                        |    977|
+|265   |    \genblk1[3].PE        |processingElement_47                                |   1312|
+|266   |      FADD                |floatAdd_66                                         |     16|
+|267   |      FM                  |floatMult_67                                        |    977|
+|268   |    \genblk1[4].PE        |processingElement_48                                |   1318|
+|269   |      FADD                |floatAdd_64                                         |     16|
+|270   |      FM                  |floatMult_65                                        |    977|
+|271   |    \genblk1[5].PE        |processingElement_49                                |   1312|
+|272   |      FADD                |floatAdd_62                                         |     16|
+|273   |      FM                  |floatMult_63                                        |    977|
+|274   |    \genblk1[6].PE        |processingElement_50                                |   1318|
+|275   |      FADD                |floatAdd_60                                         |     16|
+|276   |      FM                  |floatMult_61                                        |    977|
+|277   |    \genblk1[7].PE        |processingElement_51                                |   1312|
+|278   |      FADD                |floatAdd_58                                         |     16|
+|279   |      FM                  |floatMult_59                                        |    977|
+|280   |    \genblk1[8].PE        |processingElement_52                                |   1312|
+|281   |      FADD                |floatAdd_56                                         |     16|
+|282   |      FM                  |floatMult_57                                        |    977|
+|283   |    \genblk1[9].PE        |processingElement_53                                |   1318|
+|284   |      FADD                |floatAdd_54                                         |    309|
+|285   |      FM                  |floatMult_55                                        |    683|
+|286   |  SMax                    |softmax                                             |  28187|
+|287   |    FM1                   |floatMult_2                                         |    540|
+|288   |    FR                    |floatReciprocal                                     |   3525|
+|289   |      FM1                 |floatMult_42                                        |    470|
+|290   |      FM2                 |floatMult_43                                        |    945|
+|291   |      FM3                 |floatMult_44                                        |    759|
+|292   |    \genblk1[0].exp       |exponent                                            |   2271|
+|293   |      FADD1               |floatAdd_39                                         |     17|
+|294   |      FM1                 |floatMult_40                                        |    712|
+|295   |        exponent1         |\FM1/exponent1_funnel                               |      8|
+|296   |      FM2                 |floatMult_41                                        |    916|
+|297   |    \genblk1[1].exp       |exponent_3                                          |   2246|
+|298   |      FADD1               |floatAdd_36                                         |     17|
+|299   |      FM1                 |floatMult_37                                        |    712|
+|300   |        exponent1         |\FM1/exponent1_funnel__1                            |      8|
+|301   |      FM2                 |floatMult_38                                        |    916|
+|302   |    \genblk1[2].exp       |exponent_4                                          |   2246|
+|303   |      FADD1               |floatAdd_33                                         |     17|
+|304   |      FM1                 |floatMult_34                                        |    712|
+|305   |        exponent1         |\FM1/exponent1_funnel__2                            |      8|
+|306   |      FM2                 |floatMult_35                                        |    916|
+|307   |    \genblk1[3].exp       |exponent_5                                          |   2310|
+|308   |      FADD1               |floatAdd_30                                         |     17|
+|309   |      FM1                 |floatMult_31                                        |    712|
+|310   |        exponent1         |\FM1/exponent1_funnel__3                            |      8|
+|311   |      FM2                 |floatMult_32                                        |    948|
+|312   |    \genblk1[4].exp       |exponent_6                                          |   2246|
+|313   |      FADD1               |floatAdd_27                                         |     17|
+|314   |      FM1                 |floatMult_28                                        |    712|
+|315   |        exponent1         |\FM1/exponent1_funnel__4                            |      8|
+|316   |      FM2                 |floatMult_29                                        |    916|
+|317   |    \genblk1[5].exp       |exponent_7                                          |   2246|
+|318   |      FADD1               |floatAdd_24                                         |     17|
+|319   |      FM1                 |floatMult_25                                        |    712|
+|320   |        exponent1         |\FM1/exponent1_funnel__5                            |      8|
+|321   |      FM2                 |floatMult_26                                        |    916|
+|322   |    \genblk1[6].exp       |exponent_8                                          |   2246|
+|323   |      FADD1               |floatAdd_21                                         |     17|
+|324   |      FM1                 |floatMult_22                                        |    712|
+|325   |        exponent1         |\FM1/exponent1_funnel__6                            |      8|
+|326   |      FM2                 |floatMult_23                                        |    916|
+|327   |    \genblk1[7].exp       |exponent_9                                          |   2310|
+|328   |      FADD1               |floatAdd_18                                         |     17|
+|329   |      FM1                 |floatMult_19                                        |    712|
+|330   |        exponent1         |\FM1/exponent1_funnel__7                            |      8|
+|331   |      FM2                 |floatMult_20                                        |    948|
+|332   |    \genblk1[8].exp       |exponent_10                                         |   3373|
+|333   |      FADD1               |floatAdd_15                                         |     17|
+|334   |      FM1                 |floatMult_16                                        |    712|
+|335   |        exponent1         |\FM1/exponent1_funnel__8                            |      8|
+|336   |      FM2                 |floatMult_17                                        |   1223|
+|337   |    \genblk1[9].exp       |exponent_11                                         |   2246|
+|338   |      FADD1               |floatAdd_12                                         |     17|
+|339   |      FM1                 |floatMult_13                                        |    712|
+|340   |        exponent1         |\FM1/exponent1_funnel__9                            |      8|
+|341   |      FM2                 |floatMult_14                                        |    916|
+|342   |  Tanh1                   |UsingTheTanh                                        |   7188|
+|343   |    TanhArray             |HyperBolicTangent                                   |   3254|
+|344   |      FADD1               |floatAdd                                            |    167|
+|345   |      MGeneratingXterm    |floatMult                                           |    801|
+|346   |        exponent1         |\Tanh1/TanhArray/MGeneratingXterm/exponent1_funnel  |      8|
+|347   |      MSquaring           |floatMult_0                                         |    367|
+|348   |      MTheCoefficientTerm |floatMult_1                                         |   1125|
+|349   |  W1                      |weightMemory                                        | 647396|
+|350   |  W2                      |weightMemory__parameterized0                        |   7465|
++------+--------------------------+----------------------------------------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:21:40 ; elapsed = 00:24:34 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:21:40 ; elapsed = 00:24:58 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+Synthesis Optimization Complete : Time (s): cpu = 00:21:40 ; elapsed = 00:24:58 . Memory (MB): peak = 3647.836 ; gain = 3269.359
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 233222 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 7 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.234 . Memory (MB): peak = 4016.746 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4085 instances were transformed.
+  BUFG => BUFGCE: 1 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 242 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 3842 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+344 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:24:39 ; elapsed = 00:28:12 . Memory (MB): peak = 4016.746 ; gain = 3662.113
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.239 . Memory (MB): peak = 4016.746 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/University/Semester6/Logic-2/project_2/project_2.runs/synth_1/integrationFC.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:02:09 ; elapsed = 00:01:43 . Memory (MB): peak = 4016.746 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file integrationFC_utilization_synth.rpt -pb integrationFC_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 4016.746 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  9 18:52:56 2020...

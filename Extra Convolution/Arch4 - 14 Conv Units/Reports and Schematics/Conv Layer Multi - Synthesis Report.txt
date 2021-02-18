@@ -1,0 +1,811 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri May 29 14:46:00 2020
+# Process ID: 20628
+# Log file: C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.runs/synth_1/convLayerMulti.vds
+# Journal file: C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source convLayerMulti.tcl -notrace
+Command: synth_design -top convLayerMulti -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 281.785 ; gain = 33.137
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'convLayerMulti' [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/convLayerMulti.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter H bound to: 32 - type: integer 
+	Parameter W bound to: 32 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+	Parameter K bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'convLayerSingle' [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/convLayerSingle.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter H bound to: 32 - type: integer 
+	Parameter W bound to: 32 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'RFselector' [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/RFselector.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter H bound to: 32 - type: integer 
+	Parameter W bound to: 32 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RFselector' (1#1) [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/RFselector.v:3]
+INFO: [Synth 8-638] synthesizing module 'convUnit' [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/convUnit.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter F bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'processingElement' [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/processingElement.v:3]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'floatMult' [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/floatMult.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatMult' (2#1) [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/floatMult.v:3]
+INFO: [Synth 8-638] synthesizing module 'floatAdd' [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/floatAdd.v:3]
+INFO: [Synth 8-256] done synthesizing module 'floatAdd' (3#1) [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/floatAdd.v:3]
+INFO: [Synth 8-256] done synthesizing module 'processingElement' (4#1) [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/processingElement.v:3]
+INFO: [Synth 8-256] done synthesizing module 'convUnit' (5#1) [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/convUnit.v:3]
+INFO: [Synth 8-256] done synthesizing module 'convLayerSingle' (6#1) [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/convLayerSingle.v:3]
+INFO: [Synth 8-256] done synthesizing module 'convLayerMulti' (7#1) [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/convLayerMulti.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 980.914 ; gain = 732.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 980.914 ; gain = 732.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 980.914 ; gain = 732.266
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+INFO: [Synth 8-5545] ROM "internalReset" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "rowNumber" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "column" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "outputCounter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "internalReset" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "filterSet" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+WARNING: [Synth 8-327] inferring latch for variable 'outputConv_reg' [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/convLayerSingle.v:85]
+WARNING: [Synth 8-327] inferring latch for variable 'outputConv_reg' [C:/Users/Daniel/Desktop/CNN Sequential 14 ultrascale/CNN Sequential 14 ultrascale.srcs/sources_1/imports/Convolution Sequential 14/convLayerMulti.v:60]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:31 ; elapsed = 00:04:40 . Memory (MB): peak = 4012.195 ; gain = 3763.547
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |RFselector__GB0                 |           1|     24800|
+|2     |RFselector__GB1                 |           1|     24800|
+|3     |RFselector__GB2                 |           1|     24800|
+|4     |RFselector__GB3                 |           1|     24800|
+|5     |RFselector__GB4                 |           1|     24800|
+|6     |RFselector__GB5                 |           1|     24800|
+|7     |RFselector__GB6                 |           1|     24800|
+|8     |muxpart__280                    |           1|     67208|
+|9     |RFselector__GB8                 |           1|     24800|
+|10    |RFselector__GB9                 |           1|     24800|
+|11    |RFselector__GB10                |           1|     24800|
+|12    |RFselector__GB11                |           1|     24800|
+|13    |RFselector__GB12                |           1|     24800|
+|14    |RFselector__GB13                |           1|     24800|
+|15    |RFselector__GB14                |           1|     24800|
+|16    |RFselector__GB15                |           1|     24800|
+|17    |RFselector__GB16                |           1|     24800|
+|18    |RFselector__GB17                |           1|     24800|
+|19    |RFselector__GB18                |           1|     24800|
+|20    |RFselector__GB19                |           1|     24800|
+|21    |RFselector__GB20                |           1|     24800|
+|22    |RFselector__GB21                |           1|     24800|
+|23    |RFselector__GB22                |           1|     24800|
+|24    |RFselector__GB23                |           1|     24800|
+|25    |RFselector__GB24                |           1|     24800|
+|26    |RFselector__GB25                |           1|     24800|
+|27    |RFselector__GB26                |           1|     24800|
+|28    |RFselector__GB27                |           1|     24800|
+|29    |RFselector__GB28                |           1|     24800|
+|30    |convUnit__GBM0                  |           1|     32736|
+|31    |convUnit__GBM1                  |           1|     24576|
+|32    |convUnit__GBM2                  |           1|     17378|
+|33    |datapath__19__GD                |           1|     97328|
+|34    |convLayerSingle__outputConv_reg |           1|     25088|
+|35    |datapath__18__GD                |           1|     97328|
+|36    |convLayerSingle__GCBM3          |           1|      1635|
+|37    |outputConv_reg__GB0             |           1|     18816|
+|38    |outputConv_reg__GB1             |           1|     18816|
+|39    |outputConv_reg__GB2             |           1|     18816|
+|40    |outputConv_reg__GB3             |           1|     18816|
+|41    |outputConv_reg__GB4             |           1|     18816|
+|42    |outputConv_reg__GB5             |           1|     18816|
+|43    |outputConv_reg__GB6             |           1|     18816|
+|44    |outputConv_reg__GB7             |           1|     18816|
+|45    |case__27__GD                    |           1|    205600|
+|46    |muxpart__291                    |           1|     24800|
+|47    |case__28__GD                    |           1|    205600|
+|48    |case__29__GD                    |           1|    205600|
+|49    |case__55__GD                    |           1|    205600|
+|50    |case__30__GD                    |           1|    205600|
+|51    |case__31__GD                    |           1|    205600|
+|52    |case__32__GD                    |           1|    205600|
+|53    |case__33__GD                    |           1|    205600|
+|54    |case__34__GD                    |           1|    205600|
+|55    |case__40__GD                    |           1|    205600|
+|56    |case__41__GD                    |           1|    205600|
+|57    |case__42__GD                    |           1|    205600|
+|58    |case__24__GD                    |           1|    205600|
+|59    |case__25__GD                    |           1|    205600|
+|60    |case__35__GD                    |           1|    205600|
+|61    |case__37__GD                    |           1|    205600|
+|62    |case__26__GD                    |           1|    205600|
+|63    |case__36__GD                    |           1|    205600|
+|64    |case__38__GD                    |           1|    205600|
+|65    |case__39__GD                    |           1|    205600|
+|66    |case__43__GD                    |           1|    205600|
+|67    |case__50__GD                    |           1|    205600|
+|68    |case__51__GD                    |           1|    205600|
+|69    |case__54__GD                    |           1|    205600|
+|70    |case__53__GD                    |           1|    205600|
+|71    |case__52__GD                    |           1|    205600|
+|72    |case__44__GD                    |           1|    205600|
+|73    |case__45__GD                    |           1|    205600|
+|74    |case__46__GD                    |           1|    205600|
+|75    |case__49__GD                    |           1|    205600|
+|76    |case__48__GD                    |           1|    205600|
+|77    |case__47__GD                    |           1|    205600|
+|78    |datapath__24__GD                |           1|   1547245|
+|79    |datapath__23__GD                |           1|   1547245|
+|80    |convLayerMulti__GCB35           |           1|      1765|
++------+--------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     25 Bit       Adders := 28    
+	   3 Input     25 Bit       Adders := 56    
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 28    
+	   4 Input      8 Bit       Adders := 28    
+	   3 Input      8 Bit       Adders := 56    
+	   2 Input      8 Bit       Adders := 28    
+	   2 Input      6 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 28    
++---Registers : 
+	               32 Bit    Registers := 87    
+	                6 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  64 Input    160 Bit        Muxes := 280   
+	   2 Input     48 Bit        Muxes := 644   
+	   4 Input     32 Bit        Muxes := 56    
+	   2 Input     32 Bit        Muxes := 84    
+	   2 Input     24 Bit        Muxes := 140   
+	   2 Input     23 Bit        Muxes := 728   
+	   2 Input      8 Bit        Muxes := 28    
+	   2 Input      6 Bit        Muxes := 532   
+	   5 Input      6 Bit        Muxes := 28    
+	  26 Input      6 Bit        Muxes := 28    
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 58    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module convLayerMulti 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module RFselector 
+Detailed RTL Component Info : 
++---Muxes : 
+	  64 Input    160 Bit        Muxes := 140   
+Module floatMult 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 23    
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 19    
+	   5 Input      6 Bit        Muxes := 1     
+Module floatAdd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     25 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 5     
+	   2 Input     23 Bit        Muxes := 26    
+	   2 Input      8 Bit        Muxes := 1     
+	  26 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module processingElement 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module convUnit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+Module convLayerSingle 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:06:05 ; elapsed = 00:06:20 . Memory (MB): peak = 4351.953 ; gain = 4103.305
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "outputCounter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "internalReset" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "internalReset" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "filterSet" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+DSP Report: Generating DSP outputConv4, operation Mode is: A*(B:0x1c).
+DSP Report: operator outputConv4 is absorbed into DSP outputConv4.
+DSP Report: Generating DSP outputConv3, operation Mode is: A*(B:0x1c).
+DSP Report: operator outputConv3 is absorbed into DSP outputConv3.
+DSP Report: Generating DSP exponent1, operation Mode is: A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: Generating DSP exponent1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+DSP Report: operator exponent1 is absorbed into DSP exponent1.
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[4] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[3] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[2] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[1] driven by constant 0
+WARNING: [Synth 8-3917] design convUnit__GBM2 has port selectedInput11[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:08:12 ; elapsed = 00:15:42 . Memory (MB): peak = 4351.953 ; gain = 4103.305
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:08:12 ; elapsed = 00:15:42 . Memory (MB): peak = 4351.953 ; gain = 4103.305
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |RFselector__GB0                 |           2|     24800|
+|2     |RFselector__GB1                 |           2|     24800|
+|3     |RFselector__GB2                 |           2|     24800|
+|4     |RFselector__GB3                 |           2|     24800|
+|5     |RFselector__GB4                 |           2|     24800|
+|6     |RFselector__GB5                 |           2|     24800|
+|7     |RFselector__GB6                 |           2|     24800|
+|8     |muxpart__280                    |           2|     67208|
+|9     |RFselector__GB8                 |           2|     24800|
+|10    |RFselector__GB9                 |           2|     24800|
+|11    |RFselector__GB10                |           2|     24800|
+|12    |RFselector__GB11                |           2|     24800|
+|13    |RFselector__GB12                |           2|     24800|
+|14    |RFselector__GB13                |           2|     24800|
+|15    |RFselector__GB14                |           2|     24800|
+|16    |RFselector__GB15                |           2|     24800|
+|17    |RFselector__GB16                |           2|     24800|
+|18    |RFselector__GB17                |           2|     24800|
+|19    |RFselector__GB18                |           2|     24800|
+|20    |RFselector__GB19                |           2|     24800|
+|21    |RFselector__GB20                |           2|     24800|
+|22    |RFselector__GB21                |           2|     24800|
+|23    |RFselector__GB22                |           2|     24800|
+|24    |RFselector__GB23                |           2|     24800|
+|25    |RFselector__GB24                |           2|     24800|
+|26    |RFselector__GB25                |           2|     24800|
+|27    |RFselector__GB26                |           2|     24800|
+|28    |RFselector__GB27                |           2|     24800|
+|29    |RFselector__GB28                |           2|     24800|
+|30    |convUnit__GBM0                  |          28|     33056|
+|31    |convUnit__GBM1                  |          28|     24832|
+|32    |convUnit__GBM2                  |          28|      9844|
+|33    |datapath__19__GD                |           2|     97328|
+|34    |convLayerSingle__outputConv_reg |           2|     25088|
+|35    |datapath__18__GD                |           2|     97328|
+|36    |convLayerSingle__GCBM3          |           2|      1863|
+|37    |outputConv_reg__GB0             |           1|     18816|
+|38    |outputConv_reg__GB1             |           1|     18816|
+|39    |outputConv_reg__GB2             |           1|     18816|
+|40    |outputConv_reg__GB3             |           1|     18816|
+|41    |outputConv_reg__GB4             |           1|     18816|
+|42    |outputConv_reg__GB5             |           1|     18816|
+|43    |outputConv_reg__GB6             |           1|     18816|
+|44    |outputConv_reg__GB7             |           1|     18816|
+|45    |case__27__GD                    |           1|    205600|
+|46    |muxpart__291                    |           1|     24800|
+|47    |case__28__GD                    |           1|    205600|
+|48    |case__29__GD                    |           1|    205600|
+|49    |case__55__GD                    |           1|    205600|
+|50    |case__30__GD                    |           1|    205600|
+|51    |case__31__GD                    |           1|    205600|
+|52    |case__32__GD                    |           1|    205600|
+|53    |case__33__GD                    |           1|    205600|
+|54    |case__34__GD                    |           1|    205600|
+|55    |case__40__GD                    |           1|    205600|
+|56    |case__41__GD                    |           1|    205600|
+|57    |case__42__GD                    |           1|    205600|
+|58    |case__24__GD                    |           1|    205600|
+|59    |case__25__GD                    |           1|    205600|
+|60    |case__35__GD                    |           1|    205600|
+|61    |case__37__GD                    |           1|    205600|
+|62    |case__26__GD                    |           1|    205600|
+|63    |case__36__GD                    |           1|    205600|
+|64    |case__38__GD                    |           1|    205600|
+|65    |case__39__GD                    |           1|    205600|
+|66    |case__43__GD                    |           1|    205600|
+|67    |case__50__GD                    |           1|    205600|
+|68    |case__51__GD                    |           1|    205600|
+|69    |case__54__GD                    |           1|    205600|
+|70    |case__53__GD                    |           1|    205600|
+|71    |case__52__GD                    |           1|    205600|
+|72    |case__44__GD                    |           1|    205600|
+|73    |case__45__GD                    |           1|    205600|
+|74    |case__46__GD                    |           1|    205600|
+|75    |case__49__GD                    |           1|    205600|
+|76    |case__48__GD                    |           1|    205600|
+|77    |case__47__GD                    |           1|    205600|
+|78    |datapath__24__GD                |           1|   1547245|
+|79    |datapath__23__GD                |           1|   1547245|
+|80    |convLayerMulti__GCB35           |           1|      2171|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++---------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping    | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|convLayerMulti | A*(B:0x1c)     | No           | 18     | 6      | 48     | 25     | 24     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|convLayerMulti | A*(B:0x1c)     | No           | 18     | 6      | 48     | 25     | 24     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|floatMult      | A*B            | No           | 25     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|floatMult      | (PCIN>>17)+A*B | No           | 25     | 8      | 31     | 25     | 31     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++---------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (convLayerSingle__GCBM3:/\column_reg[5] )
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:11:39 ; elapsed = 00:51:03 . Memory (MB): peak = 4933.098 ; gain = 4684.449
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:11:39 ; elapsed = 00:51:03 . Memory (MB): peak = 4933.098 ; gain = 4684.449
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |RFselector__GB0                 |           2|      8160|
+|2     |RFselector__GB1                 |           2|      8160|
+|3     |RFselector__GB2                 |           2|      8160|
+|4     |RFselector__GB3                 |           2|      8160|
+|5     |RFselector__GB4                 |           2|      8160|
+|6     |RFselector__GB5                 |           2|      8160|
+|7     |RFselector__GB6                 |           2|      8160|
+|8     |muxpart__280                    |           2|     44808|
+|9     |RFselector__GB8                 |           2|      8160|
+|10    |RFselector__GB9                 |           2|      8160|
+|11    |RFselector__GB10                |           2|      8160|
+|12    |RFselector__GB11                |           2|      8160|
+|13    |RFselector__GB12                |           2|      8160|
+|14    |RFselector__GB13                |           2|      8160|
+|15    |RFselector__GB14                |           2|      8160|
+|16    |RFselector__GB15                |           2|      8160|
+|17    |RFselector__GB16                |           2|      8160|
+|18    |RFselector__GB17                |           2|      8160|
+|19    |RFselector__GB18                |           2|      8160|
+|20    |RFselector__GB19                |           2|      8160|
+|21    |RFselector__GB20                |           2|      8160|
+|22    |RFselector__GB21                |           2|      8160|
+|23    |RFselector__GB22                |           2|      8160|
+|24    |RFselector__GB23                |           2|      8160|
+|25    |RFselector__GB24                |           2|      8160|
+|26    |RFselector__GB25                |           2|      8160|
+|27    |RFselector__GB26                |           2|      8160|
+|28    |RFselector__GB27                |           2|      8160|
+|29    |RFselector__GB28                |           2|      8160|
+|30    |convUnit__GBM0                  |          28|      2428|
+|31    |convUnit__GBM1                  |          28|      1861|
+|32    |convUnit__GBM2                  |          28|      4104|
+|33    |datapath__19__GD                |           2|     97328|
+|34    |convLayerSingle__outputConv_reg |           2|     25088|
+|35    |datapath__18__GD                |           2|     93789|
+|36    |convLayerSingle__GCBM3          |           2|       254|
+|37    |outputConv_reg__GB0             |           1|     18816|
+|38    |outputConv_reg__GB1             |           1|     18816|
+|39    |outputConv_reg__GB2             |           1|     18816|
+|40    |outputConv_reg__GB3             |           1|     18816|
+|41    |outputConv_reg__GB4             |           1|     18816|
+|42    |outputConv_reg__GB5             |           1|     18816|
+|43    |outputConv_reg__GB6             |           1|     18816|
+|44    |outputConv_reg__GB7             |           1|     18816|
+|45    |case__27__GD                    |           1|      8247|
+|46    |muxpart__291                    |           1|     24800|
+|47    |case__28__GD                    |           1|      8247|
+|48    |case__29__GD                    |           1|      8247|
+|49    |case__55__GD                    |           1|      8247|
+|50    |case__30__GD                    |           1|      8247|
+|51    |case__31__GD                    |           1|      8247|
+|52    |case__32__GD                    |           1|      8247|
+|53    |case__33__GD                    |           1|      8247|
+|54    |case__34__GD                    |           1|      8247|
+|55    |case__40__GD                    |           1|      8247|
+|56    |case__41__GD                    |           1|      8247|
+|57    |case__42__GD                    |           1|      8247|
+|58    |case__24__GD                    |           1|      8247|
+|59    |case__25__GD                    |           1|      8247|
+|60    |case__35__GD                    |           1|      8247|
+|61    |case__37__GD                    |           1|      8247|
+|62    |case__26__GD                    |           1|      8247|
+|63    |case__36__GD                    |           1|      8247|
+|64    |case__38__GD                    |           1|      8247|
+|65    |case__39__GD                    |           1|      8247|
+|66    |case__43__GD                    |           1|      8247|
+|67    |case__50__GD                    |           1|      8247|
+|68    |case__51__GD                    |           1|      8247|
+|69    |case__54__GD                    |           1|      8247|
+|70    |case__53__GD                    |           1|      8247|
+|71    |case__52__GD                    |           1|      8247|
+|72    |case__44__GD                    |           1|      8247|
+|73    |case__45__GD                    |           1|      8247|
+|74    |case__46__GD                    |           1|      8247|
+|75    |case__49__GD                    |           1|      8247|
+|76    |case__48__GD                    |           1|      8247|
+|77    |case__47__GD                    |           1|      8247|
+|78    |datapath__24__GD                |           1|   1497069|
+|79    |datapath__23__GD                |           1|    441160|
+|80    |convLayerMulti__GCB35           |           1|       263|
++------+--------------------------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:11:39 ; elapsed = 00:51:04 . Memory (MB): peak = 4933.098 ; gain = 4684.449
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:11:39 ; elapsed = 00:51:04 . Memory (MB): peak = 4933.098 ; gain = 4684.449
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |RFselector__GB0                 |           2|      8160|
+|2     |RFselector__GB1                 |           2|      8160|
+|3     |RFselector__GB2                 |           2|      8160|
+|4     |RFselector__GB3                 |           2|      8160|
+|5     |RFselector__GB4                 |           2|      8160|
+|6     |RFselector__GB5                 |           2|      8160|
+|7     |RFselector__GB6                 |           2|      8160|
+|8     |muxpart__280                    |           2|     44808|
+|9     |RFselector__GB8                 |           2|      8160|
+|10    |RFselector__GB9                 |           2|      8160|
+|11    |RFselector__GB10                |           2|      8160|
+|12    |RFselector__GB11                |           2|      8160|
+|13    |RFselector__GB12                |           2|      8160|
+|14    |RFselector__GB13                |           2|      8160|
+|15    |RFselector__GB14                |           2|      8160|
+|16    |RFselector__GB15                |           2|      8160|
+|17    |RFselector__GB16                |           2|      8160|
+|18    |RFselector__GB17                |           2|      8160|
+|19    |RFselector__GB18                |           2|      8160|
+|20    |RFselector__GB19                |           2|      8160|
+|21    |RFselector__GB20                |           2|      8160|
+|22    |RFselector__GB21                |           2|      8160|
+|23    |RFselector__GB22                |           2|      8160|
+|24    |RFselector__GB23                |           2|      8160|
+|25    |RFselector__GB24                |           2|      8160|
+|26    |RFselector__GB25                |           2|      8160|
+|27    |RFselector__GB26                |           2|      8160|
+|28    |RFselector__GB27                |           2|      8160|
+|29    |RFselector__GB28                |           2|      8160|
+|30    |convUnit__GBM0                  |          28|      2428|
+|31    |convUnit__GBM1                  |          28|      1861|
+|32    |convUnit__GBM2                  |          28|      4104|
+|33    |datapath__19__GD                |           2|     97328|
+|34    |convLayerSingle__outputConv_reg |           2|     25088|
+|35    |datapath__18__GD                |           2|     93789|
+|36    |convLayerSingle__GCBM3          |           2|       254|
+|37    |outputConv_reg__GB0             |           1|     18816|
+|38    |outputConv_reg__GB1             |           1|     18816|
+|39    |outputConv_reg__GB2             |           1|     18816|
+|40    |outputConv_reg__GB3             |           1|     18816|
+|41    |outputConv_reg__GB4             |           1|     18816|
+|42    |outputConv_reg__GB5             |           1|     18816|
+|43    |outputConv_reg__GB6             |           1|     18816|
+|44    |outputConv_reg__GB7             |           1|     18816|
+|45    |case__27__GD                    |           1|      8247|
+|46    |muxpart__291                    |           1|     24800|
+|47    |case__28__GD                    |           1|      8247|
+|48    |case__29__GD                    |           1|      8247|
+|49    |case__55__GD                    |           1|      8247|
+|50    |case__30__GD                    |           1|      8247|
+|51    |case__31__GD                    |           1|      8247|
+|52    |case__32__GD                    |           1|      8247|
+|53    |case__33__GD                    |           1|      8247|
+|54    |case__34__GD                    |           1|      8247|
+|55    |case__40__GD                    |           1|      8247|
+|56    |case__41__GD                    |           1|      8247|
+|57    |case__42__GD                    |           1|      8247|
+|58    |case__24__GD                    |           1|      8247|
+|59    |case__25__GD                    |           1|      8247|
+|60    |case__35__GD                    |           1|      8247|
+|61    |case__37__GD                    |           1|      8247|
+|62    |case__26__GD                    |           1|      8247|
+|63    |case__36__GD                    |           1|      8247|
+|64    |case__38__GD                    |           1|      8247|
+|65    |case__39__GD                    |           1|      8247|
+|66    |case__43__GD                    |           1|      8247|
+|67    |case__50__GD                    |           1|      8247|
+|68    |case__51__GD                    |           1|      8247|
+|69    |case__54__GD                    |           1|      8247|
+|70    |case__53__GD                    |           1|      8247|
+|71    |case__52__GD                    |           1|      8247|
+|72    |case__44__GD                    |           1|      8247|
+|73    |case__45__GD                    |           1|      8247|
+|74    |case__46__GD                    |           1|      8247|
+|75    |case__49__GD                    |           1|      8247|
+|76    |case__48__GD                    |           1|      8247|
+|77    |case__47__GD                    |           1|      8247|
+|78    |datapath__24__GD                |           1|   1497069|
+|79    |datapath__23__GD                |           1|    441160|
+|80    |convLayerMulti__GCB35           |           1|       263|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:21:50 ; elapsed = 01:01:39 . Memory (MB): peak = 7656.992 ; gain = 7408.344
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:25:56 ; elapsed = 01:05:54 . Memory (MB): peak = 7656.992 ; gain = 7408.344
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:26:19 ; elapsed = 01:06:17 . Memory (MB): peak = 7656.992 ; gain = 7408.344
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:32:47 ; elapsed = 01:12:49 . Memory (MB): peak = 7656.992 ; gain = 7408.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:32:47 ; elapsed = 01:12:49 . Memory (MB): peak = 7656.992 ; gain = 7408.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 03:24:24 ; elapsed = 04:07:16 . Memory (MB): peak = 7656.992 ; gain = 7408.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+-------+
+|      |Cell    |Count  |
++------+--------+-------+
+|1     |BUFG    |     12|
+|2     |CARRY8  |    533|
+|3     |DSP48E2 |     58|
+|4     |LUT1    |    274|
+|5     |LUT2    |  37158|
+|6     |LUT3    | 175634|
+|7     |LUT4    |  86313|
+|8     |LUT5    | 176791|
+|9     |LUT6    | 655315|
+|10    |MUXCY_L |    929|
+|11    |MUXF7   |   3196|
+|12    |XORCY   |    960|
+|13    |FDCE    |   3903|
+|14    |FDPE    |     33|
+|15    |LD      | 200704|
+|16    |IBUF    |  37538|
+|17    |OBUF    | 150528|
++------+--------+-------+
+
+Report Instance Areas: 
++------+---------------------+---------------------+--------+
+|      |Instance             |Module               |Cells   |
++------+---------------------+---------------------+--------+
+|1     |top                  |                     | 1529879|
+|2     |  \genblk1[0].UUT    |convLayerSingle      |  421555|
+|3     |    \genblk1[0].CU   |convUnit_40          |    9268|
+|4     |      PE             |processingElement_80 |    7045|
+|5     |        FM           |floatMult_81         |     706|
+|6     |    \genblk1[10].CU  |convUnit_41          |    6502|
+|7     |      PE             |processingElement_78 |    4991|
+|8     |        FM           |floatMult_79         |     706|
+|9     |    \genblk1[11].CU  |convUnit_42          |    5512|
+|10    |      PE             |processingElement_76 |    4299|
+|11    |        FM           |floatMult_77         |     706|
+|12    |    \genblk1[12].CU  |convUnit_43          |    6435|
+|13    |      PE             |processingElement_74 |    4806|
+|14    |        FM           |floatMult_75         |     706|
+|15    |    \genblk1[13].CU  |convUnit_44          |    7606|
+|16    |      PE             |processingElement_72 |    5472|
+|17    |        FM           |floatMult_73         |     706|
+|18    |    \genblk1[1].CU   |convUnit_45          |    8198|
+|19    |      PE             |processingElement_70 |    6996|
+|20    |        FM           |floatMult_71         |     706|
+|21    |    \genblk1[2].CU   |convUnit_46          |    3940|
+|22    |      PE             |processingElement_68 |    2494|
+|23    |        FM           |floatMult_69         |     706|
+|24    |    \genblk1[3].CU   |convUnit_47          |    3382|
+|25    |      PE             |processingElement_66 |    2464|
+|26    |        FM           |floatMult_67         |     706|
+|27    |    \genblk1[4].CU   |convUnit_48          |    4031|
+|28    |      PE             |processingElement_64 |    2764|
+|29    |        FM           |floatMult_65         |     706|
+|30    |    \genblk1[5].CU   |convUnit_49          |    3546|
+|31    |      PE             |processingElement_62 |    2671|
+|32    |        FM           |floatMult_63         |     706|
+|33    |    \genblk1[6].CU   |convUnit_50          |    3580|
+|34    |      PE             |processingElement_60 |    2143|
+|35    |        FM           |floatMult_61         |     706|
+|36    |    \genblk1[7].CU   |convUnit_51          |    3252|
+|37    |      PE             |processingElement_58 |    2143|
+|38    |        FM           |floatMult_59         |     706|
+|39    |    \genblk1[8].CU   |convUnit_52          |    3771|
+|40    |      PE             |processingElement_56 |    2482|
+|41    |        FM           |floatMult_57         |     706|
+|42    |    \genblk1[9].CU   |convUnit_53          |    3583|
+|43    |      PE             |processingElement_54 |    2702|
+|44    |        FM           |floatMult_55         |     706|
+|45    |  \genblk1[1].UUT    |convLayerSingle_0    |  554484|
+|46    |    \genblk1[0].CU   |convUnit             |    9560|
+|47    |      PE             |processingElement_38 |    7045|
+|48    |        FM           |floatMult_39         |     706|
+|49    |    \genblk1[10].CU  |convUnit_1           |    6514|
+|50    |      PE             |processingElement_36 |    4991|
+|51    |        FM           |floatMult_37         |     706|
+|52    |    \genblk1[11].CU  |convUnit_2           |    5630|
+|53    |      PE             |processingElement_34 |    4299|
+|54    |        FM           |floatMult_35         |     706|
+|55    |    \genblk1[12].CU  |convUnit_3           |    6553|
+|56    |      PE             |processingElement_32 |    4806|
+|57    |        FM           |floatMult_33         |     706|
+|58    |    \genblk1[13].CU  |convUnit_4           |   22464|
+|59    |      PE             |processingElement_30 |    5472|
+|60    |        FM           |floatMult_31         |     706|
+|61    |    \genblk1[1].CU   |convUnit_5           |    8825|
+|62    |      PE             |processingElement_28 |    6996|
+|63    |        FM           |floatMult_29         |     706|
+|64    |    \genblk1[2].CU   |convUnit_6           |    4305|
+|65    |      PE             |processingElement_26 |    2494|
+|66    |        FM           |floatMult_27         |     706|
+|67    |    \genblk1[3].CU   |convUnit_7           |    4321|
+|68    |      PE             |processingElement_24 |    2464|
+|69    |        FM           |floatMult_25         |     706|
+|70    |    \genblk1[4].CU   |convUnit_8           |    4671|
+|71    |      PE             |processingElement_22 |    2764|
+|72    |        FM           |floatMult_23         |     706|
+|73    |    \genblk1[5].CU   |convUnit_9           |    4610|
+|74    |      PE             |processingElement_20 |    2671|
+|75    |        FM           |floatMult_21         |     706|
+|76    |    \genblk1[6].CU   |convUnit_10          |    4018|
+|77    |      PE             |processingElement_18 |    2143|
+|78    |        FM           |floatMult_19         |     706|
+|79    |    \genblk1[7].CU   |convUnit_11          |    4114|
+|80    |      PE             |processingElement_16 |    2143|
+|81    |        FM           |floatMult_17         |     706|
+|82    |    \genblk1[8].CU   |convUnit_12          |    4357|
+|83    |      PE             |processingElement_14 |    2482|
+|84    |        FM           |floatMult_15         |     706|
+|85    |    \genblk1[9].CU   |convUnit_13          |    4385|
+|86    |      PE             |processingElement    |    2702|
+|87    |        FM           |floatMult            |     706|
++------+---------------------+---------------------+--------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 12:38:38 ; elapsed = 13:47:48 . Memory (MB): peak = 7656.992 ; gain = 7408.344
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 12:38:37 ; elapsed = 13:47:57 . Memory (MB): peak = 7656.992 ; gain = 7375.207
+Synthesis Optimization Complete : Time (s): cpu = 12:38:38 ; elapsed = 13:48:01 . Memory (MB): peak = 7656.992 ; gain = 7408.344
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 240201 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 29 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 238432 instances were transformed.
+  (CARRY4) => CARRY8: 120 instances
+  BUFG => BUFGCE: 12 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 58 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 37538 instances
+  LD => LDCE: 200704 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 12:53:33 ; elapsed = 14:02:46 . Memory (MB): peak = 7887.141 ; gain = 7629.105
+write_checkpoint: Time (s): cpu = 00:03:15 ; elapsed = 00:02:00 . Memory (MB): peak = 7995.965 ; gain = 108.824
+report_utilization: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 7995.965 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 7995.965 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat May 30 04:51:08 2020...
